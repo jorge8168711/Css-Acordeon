@@ -1,0 +1,95 @@
+azul_logos = #3497db
+
+body
+	font-family Arial
+	font-size 18px
+	text-align center
+
+section
+	background #9ca4b4
+	display inline-block
+	height 500px
+	margin 0
+	padding 0
+	width 90%
+
+	h2
+		background lighten(black, 20%)
+		color white
+		font-size 2em
+		font-weight bold
+		margin .5em 0 0 0
+		padding .25em 0
+		width 100%
+		width 100%
+
+	.fondo_iconos
+		background azul_logos
+		border-radius 20px
+		display inline-block
+		height 150px
+		margin .25em
+		position relative
+		top 25px
+		width 150px
+
+		.cuadro_sobre
+			background white
+			border-radius 5px
+			height 80px
+			left 15px
+			position absolute
+			top 35px
+			width 120px
+
+			.pico_arriba
+				position absolute
+				z-index 1
+				.pico1
+					border-bottom 40px solid transparent
+					border-left 59px solid transparent
+					border-right 59px solid transparent
+					border-top 48px solid azul_logos
+					left 1px
+					position absolute
+					top 5px
+				.pico2
+					border-bottom 40px solid transparent
+					border-left 60px solid transparent
+					border-right 60px solid transparent
+					border-top 45px solid white
+					left 0
+					position absolute
+					top 4px
+
+			.pico_abajo
+				.pico1
+					border-bottom 55px solid azul_logos
+					border-left 60px solid transparent
+					border-right 60px solid transparent
+					border-top 40px solid transparent
+					bottom 4px
+					left 0
+					position absolute
+				.pico2
+					border-bottom 50px solid white
+					border-left 60px solid transparent
+					border-right 60px solid transparent
+					border-top 40px solid transparent
+					bottom 4px
+					left 0
+					position absolute
+	.mensajes
+		position absolute
+		top 30px
+		left 15px
+		height 90px
+		width 120px
+		background white
+		border-radius 50%
+
+		&:after
+			content ""
+			left 0
+			position absolute
+			top 0
