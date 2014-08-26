@@ -1,4 +1,5 @@
 azul_logos = #3497db
+sombra = 5px 3px 2px rgba(black, .2)
 
 body
 	font-family Arial
@@ -6,7 +7,7 @@ body
 	text-align center
 
 section
-	background #9ca4b4
+	background #d4d4d4
 	display inline-block
 	height 500px
 	margin 0
@@ -33,7 +34,140 @@ section
 		top 25px
 		width 150px
 
-		.cuadro_sobre
+		.calendario
+			box-shadow sombra
+			position absolute
+			top 15px
+			left 15px
+			border-radius 20px
+			width 120px
+			height 120px
+			background white
+
+			&:before
+				background #c1392b
+				border-radius 20px 20px 0 0
+				color white
+				content ""
+				height 30px
+				left 0
+				position absolute
+				top 0
+				width 120px
+
+			.dia
+				font-size 18px
+				color white
+				height 30px
+				left 0
+				margin 0
+				position absolute
+				text-align center
+				top 4px
+				width 120px
+				z-index 1
+
+			.numero
+				font-weight bold
+				font-size 70px
+				margin 10px 0 0 0
+				text-align center
+				background transparent
+				color black
+		.disquete
+			background #9994bd
+			border-radius 20px
+			box-shadow sombra
+			height 120px
+			left 15px
+			position absolute
+			top 15px
+			width 120px
+
+			.aluminio
+				background #ceccbf
+				border-radius 0 0 5px 5px
+				height 40px
+				left 20px
+				position absolute
+				top 0
+				width 80px
+
+				.sombra
+					border-left 50px solid transparent
+					border-radius 0 0 5px 5px
+					border-top 40px solid #ADADA3
+					height 0
+					position absolute
+					right 0
+					top 0
+					width 0
+
+				.cuadro_sombra
+					background #9994bd
+					border-radius 2px
+					bottom 3px
+					box-shadow 1px -3px 1px rgba(black, .3)
+					height 30px
+					position absolute
+					right 5px
+					width 20px
+
+			.etiqueta
+				background white
+				border-radius 5px 5px 0 0
+				bottom 0
+				height 60px
+				left 20px
+				position absolute
+				width 80px
+
+				.lineas
+					left 10px
+					margin 0
+					padding 0
+					position absolute
+					top 0
+					width 60px
+
+					li
+						background #9994bd
+						border-radius 2px
+						display block
+						height 8px
+						margin 8px 0 0 0
+						padding 0
+						text-decoration none
+						width 60px
+
+					.corta
+						width 50px
+
+		.mensajes
+			box-shadow sombra
+			position absolute
+			top 30px
+			left 15px
+			height 90px
+			width 120px
+			background white
+			border-radius 50%
+
+			&:after
+				border-bottom 35px solid transparent
+				border-left 10px solid transparent
+				border-right 10px solid transparent
+				border-top 35px solid white
+				content ""
+				height 0
+				transform rotate(45deg)
+				left 5px
+				position absolute
+				top 70px
+				width 0
+
+		.sobre
+			box-shadow sombra
 			background white
 			border-radius 5px
 			height 80px
@@ -79,17 +213,3 @@ section
 					bottom 4px
 					left 0
 					position absolute
-	.mensajes
-		position absolute
-		top 30px
-		left 15px
-		height 90px
-		width 120px
-		background white
-		border-radius 50%
-
-		&:after
-			content ""
-			left 0
-			position absolute
-			top 0
