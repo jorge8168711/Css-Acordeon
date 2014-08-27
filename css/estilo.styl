@@ -1,4 +1,4 @@
-azul_logos = #3497db
+fondo_azul = #3497db
 sombra = 5px 3px 2px rgba(black, .2)
 
 body
@@ -6,26 +6,26 @@ body
 	font-size 18px
 	text-align center
 
-section
-	background #d4d4d4
+.flat1
+	background #ecf0f1
+	border-radius 10px
 	display inline-block
-	height 500px
-	margin 0
-	padding 0
-	width 90%
+	height auto
+	margin .5em
+	padding 1em 0 2em 0
+	width 340px
 
-	h2
-		background lighten(black, 20%)
+	.titulo1
+		background #2c3e50
 		color white
 		font-size 2em
 		font-weight bold
-		margin .5em 0 0 0
-		padding .25em 0
-		width 100%
+		margin 0
+		padding 0
 		width 100%
 
-	.fondo_iconos
-		background azul_logos
+	.fondo_iconos1
+		background fondo_azul
 		border-radius 20px
 		display inline-block
 		height 150px
@@ -35,14 +35,14 @@ section
 		width 150px
 
 		.calendario
+			background white
+			border-radius 20px
 			box-shadow sombra
+			height 120px
+			left 15px
 			position absolute
 			top 15px
-			left 15px
-			border-radius 20px
 			width 120px
-			height 120px
-			background white
 
 			&:before
 				background #c1392b
@@ -56,26 +56,27 @@ section
 				width 120px
 
 			.dia
-				font-size 18px
 				color white
+				font-size 18px
 				height 30px
 				left 0
 				margin 0
 				position absolute
 				text-align center
-				top 4px
+				top 5px
 				width 120px
 				z-index 1
 
 			.numero
-				font-weight bold
-				font-size 70px
-				margin 10px 0 0 0
-				text-align center
 				background transparent
 				color black
+				font-size 70px
+				font-weight bold
+				margin 30px 0 0 0
+				text-align center
+				text-shadow 2px 2px 3px rgba(black, .3)
 		.disquete
-			background #9994bd
+			background #2C3E50
 			border-radius 20px
 			box-shadow sombra
 			height 120px
@@ -85,7 +86,7 @@ section
 			width 120px
 
 			.aluminio
-				background #ceccbf
+				background #ecf0f1
 				border-radius 0 0 5px 5px
 				height 40px
 				left 20px
@@ -96,7 +97,7 @@ section
 				.sombra
 					border-left 50px solid transparent
 					border-radius 0 0 5px 5px
-					border-top 40px solid #ADADA3
+					border-top 40px solid #bdc3c7
 					height 0
 					position absolute
 					right 0
@@ -104,10 +105,10 @@ section
 					width 0
 
 				.cuadro_sombra
-					background #9994bd
+					background #2C3E50
 					border-radius 2px
 					bottom 3px
-					box-shadow 1px -3px 1px rgba(black, .3)
+					box-shadow 1px -1px 2px rgba(black, .6)
 					height 30px
 					position absolute
 					right 5px
@@ -131,7 +132,7 @@ section
 					width 60px
 
 					li
-						background #9994bd
+						background #95A5A6
 						border-radius 2px
 						display block
 						height 8px
@@ -144,14 +145,14 @@ section
 						width 50px
 
 		.mensajes
-			box-shadow sombra
-			position absolute
-			top 30px
-			left 15px
-			height 90px
-			width 120px
 			background white
 			border-radius 50%
+			box-shadow sombra
+			height 90px
+			left 15px
+			position absolute
+			top 30px
+			width 120px
 
 			&:after
 				border-bottom 35px solid transparent
@@ -160,16 +161,16 @@ section
 				border-top 35px solid white
 				content ""
 				height 0
-				transform rotate(45deg)
 				left 5px
 				position absolute
 				top 70px
+				transform rotate(45deg)
 				width 0
 
 		.sobre
-			box-shadow sombra
 			background white
 			border-radius 5px
+			box-shadow sombra
 			height 80px
 			left 15px
 			position absolute
@@ -183,7 +184,7 @@ section
 					border-bottom 40px solid transparent
 					border-left 59px solid transparent
 					border-right 59px solid transparent
-					border-top 48px solid azul_logos
+					border-top 48px solid fondo_azul
 					left 1px
 					position absolute
 					top 5px
@@ -198,7 +199,7 @@ section
 
 			.pico_abajo
 				.pico1
-					border-bottom 55px solid azul_logos
+					border-bottom 55px solid fondo_azul
 					border-left 60px solid transparent
 					border-right 60px solid transparent
 					border-top 40px solid transparent
@@ -213,3 +214,40 @@ section
 					bottom 4px
 					left 0
 					position absolute
+
+.flat2
+	background #99d24f
+	border-radius 10px
+	display inline-block
+	height auto
+	margin .5em
+	padding 1em 0 2em 0
+	width 340px
+
+	.titulo2
+		background rgba(white,.9)
+		color #16a085
+		font-size 2em
+		font-weight bold
+		margin 0
+		padding 0
+		width 100%
+
+	.fondo_iconos2
+		box-shadow sombra
+		background rgba(white, .9)
+		border-radius 20px
+		display inline-block
+		height 150px
+		margin .25em
+		position relative
+		top 25px
+		width 150px
+
+		.camara
+			width 120
+			height 120
+			position absolute
+			top 15px
+			left 15px
+			background red
