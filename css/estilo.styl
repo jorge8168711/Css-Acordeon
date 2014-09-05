@@ -224,18 +224,8 @@ body
 	padding 1em 0 2em 0
 	width 340px
 
-	.titulo2
-		background rgba(white,.9)
-		color #16a085
-		font-size 2em
-		font-weight bold
-		margin 0
-		padding 0
-		width 100%
-
 	.fondo_iconos2
-		box-shadow sombra
-		background rgba(white, .9)
+		background lighten(#99d24f, 20%)
 		border-radius 20px
 		display inline-block
 		height 150px
@@ -244,10 +234,101 @@ body
 		top 25px
 		width 150px
 
-		.camara
-			width 120
-			height 120
+		.calculadora
 			position absolute
 			top 15px
 			left 15px
-			background red
+			background white
+			border-radius 10px
+			width 120px
+			height 120px
+
+			.cuadros
+				position absolute
+				top 10px
+
+				p
+					background #DBE1E3
+					box-shadow 1px 1px 2px rgba(black, .2)
+					border-radius 5px
+					color #6C7A89
+					display inline-block
+					font-family verdana
+					font-size 25px
+					font-weight bold
+					height 35px
+					margin 3px 3px
+					padding 5px
+					width 35px
+				.igual
+					background #FD8465
+					color white
+
+		.camara
+			background #ecf0f1
+			border-radius 15px
+			height 100px
+			left 15px
+			position absolute
+			top 25px
+			width 120px
+
+			&:after
+				background #ecf0f1
+				border-radius 10px 10px 0 0
+				content ""
+				height 40px
+				position absolute
+				right 30px
+				top -15px
+				width 60px
+				z-index 0
+
+			&:before
+				background #54A7A7
+				box-shadow 1px 1px 3px rgba(black, .2)
+				border-radius 50%
+				content ""
+				height 10px
+				left 10px
+				position absolute
+				top 10px
+				width 10px
+
+			.sombra
+				background #bdc3c7
+				height 50px
+				position absolute
+				top 25px
+				width 120px
+
+			.lente
+				background #ecf0f1
+				border-radius 50%
+				box-shadow 0 4px 10px rgba(black, .3)
+				height 70px
+				left 25px
+				position absolute
+				top 15px
+				width 70px
+				z-index 1
+
+				&:before
+					background #4183D7
+					box-shadow  0 -3px 3px rgba(black, .2)
+					border-radius 50%
+					content ""
+					height 50px
+					left 10px
+					position absolute
+					top 10px
+					width 50px
+
+	.titulo2
+		background rgba(white,.9)
+		color #16a085
+		font-size 2em
+		font-weight bold
+		margin 0
+		padding 0
+		width 100%

@@ -4,6 +4,7 @@
 // var dofa = [ ["Fuerza", "Oportunidad"], ["Debilidades","Amenzas"]];
 // document.write(dofa[1][1]);
 
+
 function explosion()
 {
 	alert("¡¡MUERE BITCH¡¡");
