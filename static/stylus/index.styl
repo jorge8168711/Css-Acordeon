@@ -1,48 +1,75 @@
 @import 'normalize'
 
+@font-face {
+	font-family: 'icomoon';
+	src:url('../fonts/icomoon.eot?-1sj7id');
+	src:url('../fonts/icomoon.eot?#iefix-1sj7id') format('embedded-opentype'),
+		url('../fonts/icomoon.woff?-1sj7id') format('woff'),
+		url('../fonts/icomoon.ttf?-1sj7id') format('truetype'),
+		url('../fonts/icomoon.svg?-1sj7id#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@import 'vars_mat_design'
+
+body
+	background color2
+
 .wrapper
-	box-shadow 5px 5px 2px lighten(black, 80%)
+	box-shadow z-depth-1
 	display block
 	margin 2em auto
-	width 80%
+	width 600px
 
 	&__label
 		background white
-		border solid 1px lighten(black, 80%)
+		border-bottom border-1
+		color color3
 		cursor pointer
 		display block
+		font-size 1rem
 		height 32px
 		line-height 32px
 		padding .5em
-		transition all ease-in .3s
+		transition all ease .3s
 
-		&::before
-			color #3498db
-			content '+ '
+		&::after
+			content '\e600'
+			float right
+			font-family 'icomoon'
 			font-size 1.5rem
-			font-weight bold
-			line-height 1.8rem
+			transition all ease .5s
 
 		&:hover
-			background lighten(gray, 95%)
+			background lighten(color4, 50%)
 
 	&__input
 		display none
 
-	&__input:checked + div[class="wrapper__content"]
-		opacity 1
-		display block
+	&__input:checked + .wrapper__label + .wrapper__content
 		height auto
+		overflow auto
 		padding 2%
+		visibility visible
+
+	&__input:checked + .wrapper__label
+		background lighten(color4, 50%)
+
+	&__input:checked + .wrapper__label:after
+		-ms-transform rotate(90deg)
+		-webkit-transform rotate(90deg)
+		transform rotate (90deg)
 
 	&__content
-		background #3498db
+		font-size 1.1rem
+		background color1
 		color white
-		display none
+		font-weight 300
 		height 0
-		opacity 0
-		padding 0 2%
-		transition all ease 1s
+		overflow hidden
+		padding 0
+		transition all ease .3s
+		visibility hidden
 		width 96%
 
 		h1
