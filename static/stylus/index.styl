@@ -10,67 +10,77 @@
 	font-weight: normal;
 	font-style: normal;
 }
+
 @import 'vars_mat_design'
 
 body
 	background color2
 
 .wrapper
-	box-shadow z-depth-1
+	background white
+	box-shadow z-depth-2
 	display block
 	margin 2em auto
+	overflow hidden
 	width 600px
 
-	&__label
+	&__tab
 		background white
 		border-bottom border-1
-		color color3
+		color secondary-text-color
 		cursor pointer
 		display block
 		font-size 1rem
 		height 32px
 		line-height 32px
 		padding .5em
-		transition all ease .3s
+		transition all ease-in .5s
 
 		&::after
 			content '\e600'
 			float right
 			font-family 'icomoon'
 			font-size 1.5rem
-			transition all ease .5s
+			transition all ease-in .5s
 
 		&:hover
-			background lighten(color4, 50%)
+			background lighten(color4, 70%)
+			box-shadow z-depth-1
+			position relative
+			z-index 100
 
 	&__input
 		display none
 
-	&__input:checked + .wrapper__label + .wrapper__content
+	&__input:checked + .wrapper__tab + .content
 		height auto
+		opacity 1
 		overflow auto
 		padding 2%
+		transform translatex(0px)
 		visibility visible
 
-	&__input:checked + .wrapper__label
-		background lighten(color4, 50%)
+	&__input:checked + .wrapper__tab:after
+		-ms-transform rotate(450deg)
+		-webkit-transform rotate(450deg)
+		transform rotate (450deg)
 
-	&__input:checked + .wrapper__label:after
-		-ms-transform rotate(90deg)
-		-webkit-transform rotate(90deg)
-		transform rotate (90deg)
+.content
+	background default-primary-color
+	box-shadow z-depth-1
+	color white
+	font-size 1.2rem
+	font-weight 300
+	height 0
+	line-height 1.8rem
+	opacity 0
+	overflow hidden
+	padding 0
+	transform translatex(-100%)
+	transition transform .5s cubic-bezier(0.23, 1, 0.32, 1),opacity .5s cubic-bezier(0.23, 1, 0.32, 1)
+	visibility hidden
+	width 96%
 
-	&__content
-		font-size 1.1rem
-		background color1
-		color white
-		font-weight 300
-		height 0
-		overflow hidden
-		padding 0
-		transition all ease .3s
-		visibility hidden
-		width 96%
+	&__title
+		margin 0
 
-		h1
-			margin 0
