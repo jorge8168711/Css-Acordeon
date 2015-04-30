@@ -1,0 +1,164 @@
+//UTILIDADES
+.U-text
+    display block
+    font-weight 300
+    margin 0
+    text-align center
+
+.U-social-icon
+    border-radius 50%
+    box-shadow z-depth-1
+    color secondary-text-color
+    display inline-block
+    font-family 'Material-icon'
+    font-size 1.5em
+    font-weight normal
+    height 40px
+    line-height 40px
+    margin .5em
+    padding .2em
+    text-align center
+    text-decoration none
+    transition background ease .5s
+    vertical-align middle
+    width 40px
+
+    &:hover
+        box-shadow z-depth-2
+
+//BLOQUE PORJECT INFO
+.project-info
+    background rgba(white, 90%)
+    display block
+    margin 0
+    padding .5em 0
+    text-align center
+    width 100%
+    box-shadow z-depth-1
+
+    &__title
+        color primary-text-color
+        font-size 2.5rem
+        width auto
+
+    &__autor
+        color secondary-text-color
+
+    &__divider
+        display inline-block
+
+    &__mail:before
+        content '\e606'
+
+    &__facebook:before
+        content '\e62d'
+
+    &__twitter:before
+        content '\e62e'
+
+    &__github:before
+        font-size 35px
+        content '\e62c'
+
+     &__download:before
+        content '\e604'
+
+//SOCIAL LINKS HOVER
+a[href="mailto:jorgeb_28@hotmail.es?Subject=I%20saw%20your%20"]:hover
+a[href="https://github.com/jorge8168711/Css-Acordeon/archive/master.zip"]:hover
+    color white
+    background dark-primary-color
+
+a[href="https://www.facebook.com/JorgeBarron28"]:hover
+    color white
+    background #1e62a9
+
+a[href="https://twitter.com/JorgeBarron28"]:hover
+    color white
+    background #4eb9f3
+
+a[href="https://github.com/jorge8168711/Css-Acordeon"]:hover
+    background white
+    color #333
+
+//BLOQUE MOBILE
+.mobile
+    border-radius 50%
+    display block
+    height 120px
+    margin 0 auto 5em auto
+    position relative
+    width 120px
+
+    &__label
+        background accent-color
+        border-radius 50%
+        box-shadow z-depth-1
+        color white
+        cursor pointer
+        display block
+        font-weight 300
+        height 100%
+        overflow hidden
+        text-align center
+        transition all ease .3s
+        width 100%
+
+        &:hover
+            box-shadow z-depth-2
+
+        &:before
+            -moz-osx-font-smoothing: grayscale;
+            -webkit-font-smoothing: antialiased;
+            content '\e608'
+            display block
+            font-family Material-icon
+            font-size 3.5rem
+            line-height 7.5rem
+            transition all ease .3s
+
+        &:hover:before
+            font-size 2rem
+            line-height 1.9em
+
+        &:hover:after
+            content 'Watch on your phone...'
+            line-height 1.1em
+
+    &__checkbox
+        display none
+
+        &:checked + .mobile__label
+            border-radius 50% 0% 0% 50%
+            box-shadow z-depth-2
+
+        &:checked + .mobile__label:before
+            content '\e626'
+            font-size 2rem
+            line-height 1.9em
+
+        &:checked + .mobile__label:after
+            content 'Read the QR code'
+
+        &:checked + .mobile__label + .mobile__qr-container
+            opacity 1
+            visibility visible
+            left 140px
+
+    &__qr-container
+        height auto
+        left 30px
+        margin 0
+        opacity 0
+        padding 0
+        position absolute
+        top 0
+        transition all ease .3s
+        transition-delay .5s
+        visibility hidden
+        width 120px
+        z-index -100
+
+    &__qr-image
+        max-width 100%
+        box-shadow z-depth-3
