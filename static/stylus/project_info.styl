@@ -11,7 +11,7 @@
     color secondary-text-color
     display inline-block
     font-family 'Material-icon'
-    font-size 1.5em
+    font-size 1.5rem
     font-weight normal
     height 40px
     line-height 40px
@@ -26,15 +26,23 @@
     &:hover
         box-shadow z-depth-2
 
+@media screen and (max-width 600px)
+    .U-social-icon
+        font-size 1.2rem
+        height 30px
+        line-height 30px
+        margin .4em
+        width 30px
+
 //BLOQUE PORJECT INFO
 .project-info
     background rgba(white, 90%)
+    box-shadow z-depth-1
     display block
     margin 0
     padding .5em 0
     text-align center
     width 100%
-    box-shadow z-depth-1
 
     &__title
         color primary-text-color
@@ -63,23 +71,50 @@
      &__download:before
         content '\e604'
 
+@media screen and (max-width 600px)
+    .project-info__github:before
+        font-size 30px
+
+    .project-info__title
+        font-size 2rem
+        padding .25em
+
+    .project-info__autor
+        margin-bottom .5em
+
 //SOCIAL LINKS HOVER
 a[href="mailto:jorgeb_28@hotmail.es?Subject=I%20saw%20your%20"]:hover
-a[href="https://github.com/jorge8168711/Css-Acordeon/archive/master.zip"]:hover
-    color white
     background dark-primary-color
+    color white
 
 a[href="https://www.facebook.com/JorgeBarron28"]:hover
-    color white
     background #1e62a9
+    color white
 
 a[href="https://twitter.com/JorgeBarron28"]:hover
-    color white
     background #4eb9f3
+    color white
 
 a[href="https://github.com/jorge8168711/Css-Acordeon"]:hover
     background white
     color #333
+
+@media screen and (max-width 600px)
+    a[href="mailto:jorgeb_28@hotmail.es?Subject=I%20saw%20your%20"]
+        background dark-primary-color
+        color white
+
+    a[href="https://www.facebook.com/JorgeBarron28"]
+        background #1e62a9
+        color white
+
+    a[href="https://twitter.com/JorgeBarron28"]
+        background #4eb9f3
+        color white
+
+    a[href="https://github.com/jorge8168711/Css-Acordeon"]
+        background white
+        color #333
 
 //BLOQUE MOBILE
 .mobile
@@ -162,3 +197,7 @@ a[href="https://github.com/jorge8168711/Css-Acordeon"]:hover
     &__qr-image
         max-width 100%
         box-shadow z-depth-3
+
+@media screen and (max-width 600px)
+    .mobile
+        display none
