@@ -17,6 +17,7 @@
 body
 	background lighten(color2, 50%)
 
+
 .wrapper
 	background white
 	box-shadow z-depth-2
@@ -65,6 +66,10 @@ body
 		-webkit-transform rotate(90deg)
 		transform rotate (90deg)
 
+@media screen and (max-width 600px)
+	.wrapper
+		width 95%
+
 .content
 	background default-primary-color
 	box-shadow z-depth-1
@@ -83,3 +88,10 @@ body
 
 	&__title
 		margin 0
+
+@media screen and (max-width 600px)
+	.content
+		font-size 1rem
+		line-height 1.6rem
+		transform translatex(0)
+		transition all 1s cubic-bezier(0.23, 1, 0.32, 1)
