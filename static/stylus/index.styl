@@ -1,3 +1,18 @@
+/*------------------------------------*\
+    CONTENIDO
+\*------------------------------------*/
+
+/*
+ * CONTENIDO...............Descripción del contenido de este archivo
+ * Normalize...............Normalize en formato .styl
+ * FONT-FACE...............Importamos fuentes de iconos y font-face
+ * vars_mat_design.........Importamos el archivo con estilos de material design
+ * project_info............Importamos los estilos del bloque mobile
+ * ELEMENTOS...............Estilos de las etiquetas sin clase
+ * BLOQUE ENVOLTURA........Estilos del bloque wrapper, envoltura de los contenidos
+ * BLOQUE CONTENTS.........Estilos de los contenidos que muestra cada tab
+ */
+
 @import 'normalize'
 
 @font-face {
@@ -11,13 +26,23 @@
     font-style: normal;
 }
 
+/*------------------------------------*\
+    IMPORTS
+\*------------------------------------*/
 @import 'vars_mat_design'
 @import 'project_info'
 
+
+/*------------------------------------*\
+    ELEMENTOS
+\*------------------------------------*/
 body
 	background lighten(color2, 50%)
 
 
+/*------------------------------------*\
+    BLOQUE ENVOLTURA
+\*------------------------------------*/
 .wrapper
 	background white
 	box-shadow z-depth-2
@@ -36,7 +61,7 @@ body
 		height 2em
 		line-height 2em
 		padding .5em
-		transition all ease-in .25s
+		transition all ease-in .3s
 
 		&::after
 			-moz-osx-font-smoothing: grayscale;
@@ -70,6 +95,10 @@ body
 	.wrapper
 		width 95%
 
+
+/*------------------------------------*\
+    BLOQUE CONTENIDOS
+\*------------------------------------*/
 .content
 	background default-primary-color
 	box-shadow z-depth-1
