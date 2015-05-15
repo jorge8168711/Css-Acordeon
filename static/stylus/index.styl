@@ -28,7 +28,7 @@
 }
 
 /*------------------------------------*\
-    BLOQUE ENVOLTURA
+    BLOQUE ACORDEON
 \*------------------------------------*/
 .acordeon
 	background white
@@ -48,7 +48,7 @@
 		height 2em
 		line-height 2em
 		padding .5em
-		transition all ease-in .3s
+		transition all ease .3s
 
 		&::after
 			-moz-osx-font-smoothing: grayscale;
@@ -57,10 +57,10 @@
 			float right
 			font-family 'Material-icon'
 			font-size 1.5rem
-			transition all ease .3s
+			transition all ease .5s
 
 		&:hover
-			background lighten(color4, 80%)
+			background lighten(color4, 60%)
 
 	&__input
 		display none
@@ -96,8 +96,8 @@
 	opacity 0
 	overflow hidden
 	padding 0
-	transform translatex(-100%)
-	transition transform .25s ease-in-out, opacity .25s ease-in-out
+	transform translatex(-50%)
+	transition transform .7s ease, opacity .7s ease .2s
 	visibility hidden
 	width 96%
 
@@ -109,4 +109,4 @@
 		font-size 1.1rem
 		line-height 1.6rem
 		transform translatex(0)
-		transition all .25s ease-in-out
+		transition all .25s ease
