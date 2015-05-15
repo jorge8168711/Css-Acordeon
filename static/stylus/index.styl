@@ -3,10 +3,10 @@
 \*------------------------------------*/
 
 /*
- * Normalize...............Normalize en formato .styl
- * IMPORTS.................Importamos fuentes de iconos y archivos .styl
- * BLOQUE ENVOLTURA........Estilos del bloque wrapper, envoltura de los contenidos
- * BLOQUE CONTENTS.........Estilos de los contenidos que muestra cada tab
+ * NORMALIZE..........Normalize en formato .styl
+ * IMPORTS............Importamos fuentes de iconos y archivos .styl
+ * BLOQUE ACORDEON....Estilos del bloque acordeon, envoltura de los contenidos
+ * BLOQUE CONTENTS....Estilos de los contenidos que muestra cada tab
  */
 
 /*------------------------------------*\
@@ -30,7 +30,7 @@
 /*------------------------------------*\
     BLOQUE ENVOLTURA
 \*------------------------------------*/
-.wrapper
+.acordeon
 	background white
 	box-shadow z-depth-2 //sombra en vars_mat_design.styl
 	display block
@@ -40,7 +40,7 @@
 
 	&__tab
 		background white
-		border-bottom border-1
+		border-bottom border-1 //borde en vars_mat_design.styl
 		color secondary-text-color //color en vars_mat_design.styl
 		cursor pointer
 		display block
@@ -65,7 +65,7 @@
 	&__input
 		display none
 
-	&__input:checked + .wrapper__tab + .content
+	&__input:checked + .acordeon__tab + .content
 		height auto
 		opacity 1
 		overflow auto
@@ -73,13 +73,13 @@
 		transform translatex(0px)
 		visibility visible
 
-	&__input:checked + .wrapper__tab:after
+	&__input:checked + .acordeon__tab:after
 		-ms-transform rotate(90deg)
 		-webkit-transform rotate(90deg)
 		transform rotate (90deg)
 
 @media screen and (max-width 600px)
-	.wrapper
+	.acordeon
 		width 95%
 
 /*------------------------------------*\
@@ -97,7 +97,7 @@
 	overflow hidden
 	padding 0
 	transform translatex(-100%)
-	transition transform .5s cubic-bezier(0.23, 1, 0.32, 1),opacity .5s cubic-bezier(0.23, 1, 0.32, 1)
+	transition transform .25s ease-in-out, opacity .25s ease-in-out
 	visibility hidden
 	width 96%
 
@@ -106,7 +106,7 @@
 
 @media screen and (max-width 600px)
 	.content
-		font-size 1rem
+		font-size 1.1rem
 		line-height 1.6rem
 		transform translatex(0)
-		transition all 1s cubic-bezier(0.23, 1, 0.32, 1)
+		transition all .25s ease-in-out
