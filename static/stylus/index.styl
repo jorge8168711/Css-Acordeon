@@ -3,17 +3,18 @@
 \*------------------------------------*/
 
 /*
- * CONTENIDO...............Descripción del contenido de este archivo
  * Normalize...............Normalize en formato .styl
- * FONT-FACE...............Importamos fuentes de iconos y font-face
- * vars_mat_design.........Importamos el archivo con estilos de material design
- * project_info............Importamos los estilos del bloque mobile
- * ELEMENTOS...............Estilos de las etiquetas sin clase
+ * IMPORTS.................Importamos fuentes de iconos y archivos .styl
  * BLOQUE ENVOLTURA........Estilos del bloque wrapper, envoltura de los contenidos
  * BLOQUE CONTENTS.........Estilos de los contenidos que muestra cada tab
  */
 
+/*------------------------------------*\
+    IMPORTS
+\*------------------------------------*/
+@import 'vars_mat_design'
 @import 'normalize'
+@import 'info'
 
 @font-face {
     font-family: 'Material-icon';
@@ -27,25 +28,11 @@
 }
 
 /*------------------------------------*\
-    IMPORTS
-\*------------------------------------*/
-@import 'vars_mat_design'
-@import 'project_info'
-
-
-/*------------------------------------*\
-    ELEMENTOS
-\*------------------------------------*/
-body
-	background lighten(color2, 50%)
-
-
-/*------------------------------------*\
     BLOQUE ENVOLTURA
 \*------------------------------------*/
 .wrapper
 	background white
-	box-shadow z-depth-2
+	box-shadow z-depth-2 //sombra en vars_mat_design.styl
 	display block
 	margin 2em auto
 	overflow hidden
@@ -54,7 +41,7 @@ body
 	&__tab
 		background white
 		border-bottom border-1
-		color secondary-text-color
+		color secondary-text-color //color en vars_mat_design.styl
 		cursor pointer
 		display block
 		font-size 1rem
@@ -95,13 +82,12 @@ body
 	.wrapper
 		width 95%
 
-
 /*------------------------------------*\
     BLOQUE CONTENIDOS
 \*------------------------------------*/
 .content
-	background default-primary-color
-	box-shadow z-depth-1
+	background default-primary-color //color en vars_mat_design.styl
+	box-shadow z-depth-1 //sombra en vars_mat_design.styl
 	color white
 	font-size 1.2rem
 	font-weight 300
