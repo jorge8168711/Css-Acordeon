@@ -101,7 +101,9 @@ figure {
   margin: 1em 40px;
 }
 hr {
-  box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
   height: 0;
 }
 pre {
@@ -151,7 +153,9 @@ input {
 }
 input[type="checkbox"],
 input[type="radio"] {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
   padding: 0;
 }
 input[type="number"]::-webkit-inner-spin-button,
@@ -160,6 +164,8 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 input[type="search"] {
   -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
   box-sizing: content-box;
 }
 input[type="search"]::-webkit-search-cancel-button,
@@ -191,7 +197,8 @@ th {
 }
 .info {
   background: rgba(255,255,255,0.9);
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+          box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
   padding: 0.5em 0;
   text-align: center;
   width: 100%;
@@ -215,8 +222,10 @@ th {
 .info__social-icon {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  border-radius: 50%;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+          box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
   color: #727272;
   display: inline-block;
   font-family: 'Material-icon';
@@ -228,12 +237,14 @@ th {
   padding: 0.2em;
   text-align: center;
   text-decoration: none;
-  transition: background ease 0.25s, box-shadow ease 0.5s;
+  -webkit-transition: background ease 0.25s, -webkit-box-shadow ease 0.5s;
+          transition: background ease 0.25s, box-shadow ease 0.5s;
   vertical-align: middle;
   width: 40px;
 }
 .info__social-icon:hover {
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  -webkit-box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+          box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 .info__social-icon--mail:before {
   content: '\e606';
@@ -305,7 +316,8 @@ th {
   }
 }
 .mobile {
-  border-radius: 50%;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
   display: block;
   height: 120px;
   margin: 5em auto;
@@ -314,8 +326,10 @@ th {
 }
 .mobile__label {
   background: #03a9f4;
-  border-radius: 50%;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+          box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
   color: #fff;
   cursor: pointer;
   display: block;
@@ -323,11 +337,9 @@ th {
   height: 100%;
   overflow: hidden;
   text-align: center;
-  transition: all ease 0.3s;
+  -webkit-transition: all ease 0.3s;
+          transition: all ease 0.3s;
   width: 100%;
-}
-.mobile__label:hover {
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 .mobile__label:before {
   -moz-osx-font-smoothing: grayscale;
@@ -336,23 +348,26 @@ th {
   display: block;
   font-family: 'Material-icon';
   font-size: 3.5rem;
-  line-height: 7.5rem;
-  transition: all ease 0.3s;
+  line-height: 120px;
+  -webkit-transition: all ease 0.3s;
+          transition: all ease 0.3s;
 }
 .mobile__label:hover:before {
   font-size: 2rem;
-  line-height: 1.9em;
+  line-height: 60px;
 }
 .mobile__label:hover:after {
   content: 'Watch on your phone...';
-  line-height: 1.1em;
+  line-height: 16px;
 }
 .mobile__checkbox {
   display: none;
 }
 .mobile__checkbox:checked + .mobile__label {
-  border-radius: 50% 0% 0% 50%;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  -webkit-border-radius: 50% 0% 0% 50%;
+          border-radius: 50% 0% 0% 50%;
+  -webkit-box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+          box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 .mobile__checkbox:checked + .mobile__label:before {
   content: '\e626';
@@ -379,16 +394,19 @@ th {
   padding: 0;
   position: absolute;
   top: 0;
-  transition: all ease 0.5s 0.5s;
+  -webkit-transition: all ease 0.5s 0.5s;
+          transition: all ease 0.5s 0.5s;
   visibility: hidden;
   width: 120px;
   z-index: -100;
 }
 .mobile__qr-image {
-  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  -webkit-box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+          box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
   max-width: 50%;
   opacity: 0;
-  transition: max-width ease 0.5s 0.5s, opacity ease 0.5s 0.5s;
+  -webkit-transition: max-width ease 0.5s 0.5s, opacity ease 0.5s 0.5s;
+          transition: max-width ease 0.5s 0.5s, opacity ease 0.5s 0.5s;
 }
 @media screen and (max-width: 600px) {
   .mobile {
@@ -406,7 +424,8 @@ th {
 \*------------------------------------*/
 .acordeon {
   background: #fff;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  -webkit-box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+          box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   display: block;
   margin: 2em auto;
   overflow: hidden;
@@ -422,7 +441,8 @@ th {
   height: 2em;
   line-height: 2em;
   padding: 0.5em;
-  transition: all ease 0.3s;
+  -webkit-transition: all ease 0.3s;
+          transition: all ease 0.3s;
 }
 .acordeon__tab::after {
   -moz-osx-font-smoothing: grayscale;
@@ -431,7 +451,8 @@ th {
   float: right;
   font-family: 'Material-icon';
   font-size: 1.5rem;
-  transition: all ease 0.5s;
+  -webkit-transition: all ease 0.5s;
+          transition: all ease 0.5s;
 }
 .acordeon__tab:hover {
   background: #f3f3f3;
@@ -444,15 +465,15 @@ th {
   opacity: 1;
   overflow: auto;
   padding: 2%;
-  -webkit-transform: translatex(0px);
-      -ms-transform: translatex(0px);
-          transform: translatex(0px);
+  -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+          transform: translateX(0);
   visibility: visible;
 }
 .acordeon__input:checked + .acordeon__tab:after {
-  -ms-transform: rotate(90deg);
   -webkit-transform: rotate(90deg);
-  transform: rotate 90deg;
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
 }
 @media screen and (max-width: 600px) {
   .acordeon {
@@ -463,7 +484,8 @@ th {
 \*------------------------------------*/
 .content {
   background: #2196f3;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+          box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
   color: #fff;
   font-size: 1.2rem;
   font-weight: 300;
@@ -472,11 +494,11 @@ th {
   opacity: 0;
   overflow: hidden;
   padding: 0;
-  -webkit-transform: translatex(-50%);
-      -ms-transform: translatex(-50%);
-          transform: translatex(-50%);
-  transition: -webkit-transform 0.7s ease, opacity 0.7s ease 0.2s;
-  transition: transform 0.7s ease, opacity 0.7s ease 0.2s;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-transition: -webkit-transform 0.7s ease, opacity 0.7s ease 0.2s;
+          transition: transform 0.7s ease, opacity 0.7s ease 0.2s;
   visibility: hidden;
   width: 96%;
 }
@@ -487,9 +509,10 @@ th {
   .content {
     font-size: 1.1rem;
     line-height: 1.6rem;
-    -webkit-transform: translatex(0);
-        -ms-transform: translatex(0);
-            transform: translatex(0);
-    transition: all 0.25s ease;
+    -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+            transform: translateX(0);
+    -webkit-transition: all 0.25s ease;
+            transition: all 0.25s ease;
   }
 }

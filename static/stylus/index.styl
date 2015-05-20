@@ -70,13 +70,11 @@
 		opacity 1
 		overflow auto
 		padding 2%
-		transform translatex(0px)
+		transform translateX(0)
 		visibility visible
 
 	&__input:checked + .acordeon__tab:after
-		-ms-transform rotate(90deg)
-		-webkit-transform rotate(90deg)
-		transform rotate (90deg)
+		transform rotate(90deg)
 
 @media screen and (max-width 600px)
 	.acordeon
@@ -96,7 +94,7 @@
 	opacity 0
 	overflow hidden
 	padding 0
-	transform translatex(-50%)
+	transform translateX(-50%)
 	transition transform .7s ease, opacity .7s ease .2s
 	visibility hidden
 	width 96%
@@ -108,5 +106,5 @@
 	.content
 		font-size 1.1rem
 		line-height 1.6rem
-		transform translatex(0)
+		transform translateX(0)
 		transition all .25s ease
