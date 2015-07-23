@@ -2,16 +2,12 @@
     BLOQUE ACORDEON
 \*------------------------------------*/
 .acordeon-item
-    background white
-    box-shadow z-depth-2 //sombra en vars_mat_design.styl
-    display block
-    margin 2em auto
-    overflow hidden
-    width 600px
+    background-color white
+    display table
 
-    &__tab
-        background white
-        border-bottom border-1 //borde en vars_mat_design.styl
+    &__label
+        background-color white
+        border z-depth-0 //borde en vars_mat_design.styl
         color secondary-text-color //color en vars_mat_design.styl
         cursor pointer
         display block
@@ -31,12 +27,12 @@
             transition all ease .5s
 
         &:hover
-            background lighten(color4, 60%)
+            background-color lighten(divider-color, 92%)
 
     &__input
         display none
 
-    &__input:checked + .acordeon__tab + .content
+    &__input:checked + .acordeon-item__label + .content
         height auto
         opacity 1
         overflow auto
@@ -44,39 +40,9 @@
         transform translateX(0)
         visibility visible
 
-    &__input:checked + .acordeon__tab:after
+    &__input:checked + .acordeon-item__label:after
         transform rotate(90deg)
 
 @media screen and (max-width 600px)
-    .acordeon
+    .acordeon-item
         width 95%
-
-
-/*------------------------------------*\
-    BLOQUE CONTENIDOS
-\*------------------------------------*/
-.content
-    background default-primary-color //color en vars_mat_design.styl
-    box-shadow z-depth-1 //sombra en vars_mat_design.styl
-    color white
-    font-size 1.2rem
-    font-weight 300
-    height 0
-    line-height 1.8rem
-    opacity 0
-    overflow hidden
-    padding 0
-    transform translateX(-50%)
-    transition transform .7s ease, opacity .7s ease .2s
-    visibility hidden
-    width 96%
-
-    &__title
-        margin 0
-
-@media screen and (max-width 600px)
-    .content
-        font-size 1.1rem
-        line-height 1.6rem
-        transform translateX(0)
-        transition all .25s ease

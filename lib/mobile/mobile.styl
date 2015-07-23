@@ -1,89 +1,63 @@
 /*------------------------------------*\
-    BLOQUE MOBILE
+    BLOQUE MOBILE__LABEL
 \*------------------------------------*/
-.mobile
-    border-radius 50%
-    display block
-    height 120px
-    margin 5em auto
-    position relative
-    width 120px
-
-    &__label
-        background accent-color //color en vars_mat_design.styl
-        border-radius 50%
-        box-shadow z-depth-1 //sombra en vars_mat_design.styl
-        color white
-        cursor pointer
+.mobile__label
+    &:before
+        -moz-osx-font-smoothing  grayscale
+        -webkit-font-smoothing  antialiased
+        content '\e608'
         display block
-        font-weight 300
-        height 100%
-        overflow hidden
-        text-align center
+        font-family 'Material-icon'
+        font-size 3.5rem
+        line-height 120px
         transition all ease .3s
-        width 100%
 
-        &:before
-            -moz-osx-font-smoothing  grayscale
-            -webkit-font-smoothing  antialiased
-            content '\e608'
-            display block
-            font-family 'Material-icon'
-            font-size 3.5rem
-            line-height 120px
-            transition all ease .3s
+    &:hover:before
+        font-size 2rem
+        line-height 60px
 
-        &:hover:before
-            font-size 2rem
-            line-height 60px
+    &:hover:after
+        content 'Watch on your phone...'
+        line-height 16px
 
-        &:hover:after
-            content 'Watch on your phone...'
-            line-height 16px
+/*------------------------------------*\
+    BLOQUE MOBILE__CHECKBOX
+\*------------------------------------*/
+.mobile__checkbox
+    &:checked + .mobile__label
+        border-radius 50% 0% 0% 50%
+        box-shadow z-depth-2 //sombra en vars_mat_design.styl
 
-    &__checkbox
-        display none
+    &:checked + .mobile__label:before
+        content '\e626'
+        font-size 2rem
+        line-height 1.9em
 
-        &:checked + .mobile__label
-            border-radius 50% 0% 0% 50%
-            box-shadow z-depth-2 //sombra en vars_mat_design.styl
+    &:checked + .mobile__label:after
+        content 'Read the QR code'
 
-        &:checked + .mobile__label:before
-            content '\e626'
-            font-size 2rem
-            line-height 1.9em
+    &:checked + .mobile__label + .mobile__qr-container
+        left 140px
+        opacity 1
+        visibility visible
 
-        &:checked + .mobile__label:after
-            content 'Read the QR code'
+    &:checked + .mobile__label + .mobile__qr-container > .mobile__qr-image
+        max-width 100%
+        display block
+        opacity 1
 
-        &:checked + .mobile__label + .mobile__qr-container
-            left 140px
-            opacity 1
-            visibility visible
-
-        &:checked + .mobile__label + .mobile__qr-container > .mobile__qr-image
-            max-width 100%
-            opacity 1
-
-    &__qr-container
-        height auto
-        left 0
-        margin 0
-        opacity 0
-        padding 0
-        position absolute
-        top 0
-        transition all ease .5s .5s
-        visibility hidden
-        width 120px
-        z-index -100
-
-    &__qr-image
-        box-shadow z-depth-3 //sombra en vars_mat_design.styl-depth-3
-        max-width 50%
-        opacity 0
-        transition max-width ease .5s .5s, opacity ease .5s .5s
-
-@media screen and (max-width 600px)
-    .mobile
-        display none
+/*------------------------------------*\
+    BLOQUE MOBILE__QR__CONTAINER
+\*------------------------------------*/
+.mobile__qr-container
+    height auto
+    left 0
+    margin 0
+    opacity 0
+    padding 0
+    position absolute
+    top 0
+    transition all ease .5s .5s
+    visibility hidden
+    width 120px
+    z-index -100
