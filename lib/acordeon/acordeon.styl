@@ -1,38 +1,7 @@
 /*------------------------------------*\
-    CONTENIDO
-\*------------------------------------*/
-
-/*
- * IMPORTS.............Importamos fuentes de iconos y archivos .styl
-                       vars_mat_design: Variables de color y sombras.
-                       Normalize: Normalize.styl
-                       Info: Estilos del bloque info
- * BLOQUE ACORDEON....Estilos del bloque acordeon, envoltura de los contenidos
- * BLOQUE CONTENTS....Estilos de los contenidos que muestra cada tab
- */
-
-/*------------------------------------*\
-    IMPORTS
-\*------------------------------------*/
-@import 'vars_mat_design'
-@import 'normalize'
-@import 'info'
-
-@font-face {
-    font-family: 'Material-icon';
-    src:url('../fonts/Material-icon.eot?-pmbwi1');
-    src:url('../fonts/Material-icon.eot?#iefix-pmbwi1') format('embedded-opentype'),
-        url('../fonts/Material-icon.woff?-pmbwi1') format('woff'),
-        url('../fonts/Material-icon.ttf?-pmbwi1') format('truetype'),
-        url('../fonts/Material-icon.svg?-pmbwi1#Material-icon') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
-/*------------------------------------*\
     BLOQUE ACORDEON
 \*------------------------------------*/
-.acordeon
+.acordeon-item
     background white
     box-shadow z-depth-2 //sombra en vars_mat_design.styl
     display block
@@ -81,6 +50,7 @@
 @media screen and (max-width 600px)
     .acordeon
         width 95%
+
 
 /*------------------------------------*\
     BLOQUE CONTENIDOS
