@@ -1,0 +1,28 @@
+/*------------------------------------*\
+    BLOQUE CONTENIDOS
+\*------------------------------------*/
+.content
+    background-color default-primary-color //color en vars_mat_design.styl
+    box-shadow z-depth-1 //sombra en vars_mat_design.styl
+    color white
+    font-size 1.2rem
+    font-weight 300
+    height 0
+    line-height 1.8rem
+    opacity 0
+    overflow hidden
+    padding 0
+    transform translateX(-50%)
+    transition transform .7s ease, opacity .7s ease .2s
+    visibility hidden
+    width 96%
+
+    &__title
+        margin 0
+
+@media screen and (max-width 600px)
+    .content
+        font-size 1.1rem
+        line-height 1.6rem
+        transform translateX(0)
+        transition all .25s ease

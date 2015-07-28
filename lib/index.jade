@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+html(lang='es')
+    head
+        //-METATAGS
+        meta(charset='UTF-8')
+        meta(name='description' content='Acordeon web echo con únicamente CSS.')
+        meta(name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1')
+        
+        title Css Acordeon
+        
+        style
+            //-INCLUDE QUE CONTIENE LOS ESTILOS DE LA PARTE SUPERIOR DEL SITIO.
+            include ./primary-css/primary-css.css
+        
+    body
+        //-INCLUDE DEL COMPONENTE HEADER------>
+        include ./header/header.jade
+        
+        //-INCLUDE DEL COMPONENTE ACORDEON---->
+        include ./acordeon/acordeon.jade
+        
+        //-INCLUDE DEL COMPONENTE ACORDEON---->
+        include ./mobile/mobile.jade
+
+//-INCLUDE DE LOS ESTILOS QUE NO SON PRIORIDAD PARA LA PARTE SUPERIOR DEL SITIO.
+link(rel='stylesheet' type='text/css' href='./public/css/index.min.css')

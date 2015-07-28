@@ -1,0 +1,38 @@
+/*------------------------------------*\
+    BLOQUE MOBILE
+\*------------------------------------*/
+.mobile
+    border-radius 50%
+    display block
+    height 120px
+    margin 5em auto
+    position relative
+    width 120px
+
+    &__label
+        background accent-color //color en vars_mat_design.styl
+        border-radius 50%
+        box-shadow z-depth-1 //sombra en vars_mat_design.styl
+        color white
+        cursor pointer
+        display block
+        font-weight 300
+        height 100%
+        overflow hidden
+        text-align center
+        transition all ease .3s
+        width 100%
+
+    &__checkbox
+        display none
+
+    &__qr-image
+        box-shadow z-depth-3 //sombra en vars_mat_design.styl-depth-3
+        display none
+        max-width 50%
+        opacity 0
+        transition max-width ease .5s .5s, opacity ease .5s .5s
+
+@media screen and (max-width 600px)
+    .mobile
+        display none
