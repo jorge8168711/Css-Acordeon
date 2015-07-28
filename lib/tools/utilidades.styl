@@ -1,6 +1,10 @@
 .U-wrapper
     overflow hidden
-    background-color white
+    background-color lighten(light-primary-color, 60%)
     box-shadow z-depth-2 //sombra en variables.styl
     margin 2em auto
     width 600px
+
+@media screen and (max-width 600px)
+    .U-wrapper
+        width 90%

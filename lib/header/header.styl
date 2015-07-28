@@ -3,22 +3,24 @@
 \*------------------------------------*/
 
 /*
- * BLOQUE INFO.....Header que contiene título y autor del proyecto
+ * BLOQUE HEADER.....Header que contiene título y autor del proyecto
  * BLOQUE MOBILE...Botón que muestra el código QR para ver en moviles
  */
 
 /*------------------------------------*\
-    BLOQUE INFO
+    BLOQUE HEADER
 \*------------------------------------*/
-.info
-    background rgba(white, 90%)
+.header
+    background dark-primary-color
     box-shadow z-depth-1 //sombra en vars_mat_design.styl
-    padding .5em 0
+    box-sizing border-box
+    padding 1em 0
+    position relative
     text-align center
     width 100%
 
     &__title
-        color primary-text-color //color en vars_mat_design.styl
+        color rgba(white, .9)
         display block
         font-size 2.5rem
         font-weight 300
@@ -26,8 +28,8 @@
         width auto
 
     &__autor
-        color secondary-text-color //color en vars_mat_design.styl
-        font-weight 300
+        color light-primary-color //color en vars_mat_design.styl
+        font-weight 400
         margin 0
 
     &__by
@@ -36,9 +38,10 @@
     &__social-icon
         -moz-osx-font-smoothing: grayscale;
         -webkit-font-smoothing: antialiased;
+        background-color default-primary-color
         border-radius 50%
         box-shadow z-depth-1 //sombra en vars_mat_design.styl
-        color secondary-text-color //color en vars_mat_design.styl
+        color white
         display inline-block
         font-family 'Material-icon'
         font-size 1.5rem
@@ -54,68 +57,39 @@
         width 40px
 
         &:hover
+            background-color lighten(accent-color, 5%)
             box-shadow z-depth-2 //sombra en vars_mat_design.styl
 
         &--mail:before
             content '\e606'
-        &--mail:hover
-            background dark-primary-color //color en vars_mat_design.styl
-            color white
 
         &--facebook:before
             content '\e62d'
-        &--facebook:hover
-            background #1e62a9
-            color white
 
         &--twitter:before
             content '\e62e'
-        &--twitter:hover
-            background #4eb9f3
-            color white
 
         &--github:before
             font-size 35px
             content '\e62c'
-        &--github:hover
-        &--download:hover
-            background white
-            color #333
 
          &--download:before
             content '\e604'
 
 @media screen and (max-width 600px)
-    .info__title
+    .header__title
         font-size 2rem
         padding 0
 
-    .info__autor
+    .header__autor
         margin-bottom .5em
 
-    .info__social-icon
+    .header__social-icon
         font-size 1.2rem
         height 30px
         line-height 30px
         margin .4em
         width 30px
-
-        &--mail
-            background dark-primary-color //color en vars_mat_design.styl
-            color white
-
-        &--facebook
-            background #1e62a9
-            color white
-
-        &--twitter
-            background #4eb9f3
-            color white
-
-        &--github
-        &--download
-            background white
-            color #333
 
         &--github:before
             font-size 30px
