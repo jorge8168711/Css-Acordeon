@@ -16,7 +16,7 @@
         height 2em
         line-height 2em
         padding .5em
-        transition all ease .3s
+        transition all .3s ease
         position relative
 
         &::after
@@ -26,7 +26,7 @@
             float right
             font-family 'Material-icon'
             font-size 1.5rem
-            transition all ease .5s
+            transition all .5s ease
 
         &:hover
             border-color rgba(255,255,255,.1)
@@ -45,9 +45,8 @@
     &__input:checked + .acordeon-item__label + .content
         height auto
         opacity 1
-        overflow auto
         padding 2%
-        transform translateX(0)
+        transform scaleY(1)
         visibility visible
 
     &__input:checked + .acordeon-item__label:after
