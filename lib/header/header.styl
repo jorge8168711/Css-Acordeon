@@ -13,83 +13,102 @@
 .header
     background dark-primary-color
     box-shadow z-depth-1 //sombra en vars_mat_design.styl
-    box-sizing border-box
-    padding 1em 0
+    padding .75em 0
     position relative
-    text-align center
     width 100%
+
+    &__info
+        box-sizing border-box
+        display block
+        margin 0
+        padding .5em .75em
+        position relative
+        width 220px
+
+        &::after
+            border-right 5px solid accent-color
+            content ''
+            display block
+            height 90%
+            position absolute
+            right 0
+            top 5%
 
     &__title
         color rgba(white, .9)
-        display block
-        font-size 2.5rem
+        font-size 1.8rem
         font-weight 300
-        margin .25em
-        width auto
 
     &__autor
         color light-primary-color //color en vars_mat_design.styl
-        font-weight 400
+        font-size 1rem
+        font-weight 300
         margin 0
 
-    &__by
-        font-weight 100
+.nav
+    display block
+    left 230px
+    position absolute
+    top 35%
 
-    &__social-icon
-        -moz-osx-font-smoothing: grayscale;
-        -webkit-font-smoothing: antialiased;
-        background-color default-primary-color
-        border-radius 50%
-        box-shadow z-depth-1 //sombra en vars_mat_design.styl
-        color white
+    &__link
+        border-radius .125em
+        color darken(light-primary-color, 20%)
         display inline-block
-        font-family 'Material-icon'
-        font-size 1.5rem
+        font-size 1.1rem
         font-weight normal
-        height 40px
-        line-height 40px
-        margin .5em
-        padding .2em
+        height 1.2em
+        line-height 1.2em
+        margin 0 .5em
+        padding .5em
         text-align center
         text-decoration none
-        transition background ease .25s, box-shadow ease .5s
-        vertical-align middle
-        width 40px
+        transition all ease .3s
+        width auto
 
         &:hover
-            background-color lighten(accent-color, 5%)
-            box-shadow z-depth-2 //sombra en vars_mat_design.styl
+            background-color accent-color
+            box-shadow z-depth-1 //sombra en vars_mat_design.styl
+            color rgba(255,255,255,.8)
 
-        &--mail:before
-            content '\e606'
+@media screen and (max-width 630px)
+    .header
+        &__title
+            font-size 1.4rem
 
-        &--facebook:before
-            content '\e62d'
+        &__info
+            width 175px
+    .nav
+        left 185px
 
-        &--twitter:before
-            content '\e62e'
+        &__link
+            font-size 1rem
+            margin 0 .25em
+            padding .25em
 
-        &--github:before
-            font-size 35px
-            content '\e62c'
+@media screen and (max-width 500px)
+    .header
+        height 120px
 
-         &--download:before
-            content '\e604'
+        &__info
+            height 115px
+            width 50%
 
-@media screen and (max-width 600px)
-    .header__title
-        font-size 2rem
-        padding 0
+        &__title
+            padding 0
 
-    .header__autor
-        margin-bottom .5em
+        &__link
+            font-size 1rem
 
-    .header__social-icon
-        font-size 1.2rem
-        height 30px
-        line-height 30px
-        margin .4em
-        width 30px
+    .nav
+        left 50%
+        top 13%
+        width 45%
 
-        &--github:before
-            font-size 30px
+        &__link
+            display block
+            font-size 1rem
+            margin 0 .2em
+            padding .2em .2em .2em 10%
+            text-align left
+            text-decoration underline
