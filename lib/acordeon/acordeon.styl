@@ -2,13 +2,14 @@
     BLOQUE ACORDEON
 \*------------------------------------*/
 .acordeon-item
-    background-color white
-    display table
+    background-color lighten(light-primary-color, 90%)
+    display block
 
     &__label
-        background-color white
-        border z-depth-0 //borde en vars_mat_design.styl
-        color secondary-text-color //color en vars_mat_design.styl
+        background-color default-primary-color//lighten(light-primary-color, 70%)
+        border-bottom solid 1px rgba(255,255,255,.3)//borde en vars_mat_design.styl
+        box-shadow z-depth-1
+        color rgba(255,255,255,.9) //color en vars_mat_design.styl
         cursor pointer
         display block
         font-size 1rem
@@ -16,6 +17,7 @@
         line-height 2em
         padding .5em
         transition all ease .3s
+        position relative
 
         &::after
             -moz-osx-font-smoothing: grayscale;
@@ -27,10 +29,18 @@
             transition all ease .5s
 
         &:hover
-            background-color lighten(divider-color, 92%)
+            border-color rgba(255,255,255,.1)
+            background-color rgba(default-primary-color, .9)
+            z-index 20
 
     &__input
         display none
+
+    &__input:checked + .acordeon-item__label
+        background-color rgba(default-primary-color, .9)
+        border-left 10px solid accent-color
+        box-shadow z-depth-1
+        z-index 10
 
     &__input:checked + .acordeon-item__label + .content
         height auto
@@ -42,7 +52,3 @@
 
     &__input:checked + .acordeon-item__label:after
         transform rotate(90deg)
-
-@media screen and (max-width 600px)
-    .acordeon-item
-        width 95%

@@ -3,119 +3,112 @@
 \*------------------------------------*/
 
 /*
- * BLOQUE INFO.....Header que contiene título y autor del proyecto
+ * BLOQUE HEADER.....Header que contiene título y autor del proyecto
  * BLOQUE MOBILE...Botón que muestra el código QR para ver en moviles
  */
 
 /*------------------------------------*\
-    BLOQUE INFO
+    BLOQUE HEADER
 \*------------------------------------*/
-.info
-    background rgba(white, 90%)
+.header
+    background dark-primary-color
     box-shadow z-depth-1 //sombra en vars_mat_design.styl
-    padding .5em 0
-    text-align center
+    padding .75em 0
+    position relative
     width 100%
 
-    &__title
-        color primary-text-color //color en vars_mat_design.styl
+    &__info
+        box-sizing border-box
         display block
-        font-size 2.5rem
+        margin 0
+        padding .5em .75em
+        position relative
+        width 220px
+
+        &::after
+            border-right 5px solid accent-color
+            content ''
+            display block
+            height 90%
+            position absolute
+            right 0
+            top 5%
+
+    &__title
+        color rgba(white, .9)
+        font-size 1.8rem
         font-weight 300
-        margin .25em
-        width auto
 
     &__autor
-        color secondary-text-color //color en vars_mat_design.styl
+        color light-primary-color //color en vars_mat_design.styl
+        font-size 1rem
         font-weight 300
         margin 0
 
-    &__by
-        font-weight 100
+.nav
+    display block
+    left 230px
+    position absolute
+    top 35%
 
-    &__social-icon
-        -moz-osx-font-smoothing: grayscale;
-        -webkit-font-smoothing: antialiased;
-        border-radius 50%
-        box-shadow z-depth-1 //sombra en vars_mat_design.styl
-        color secondary-text-color //color en vars_mat_design.styl
+    &__link
+        border-radius .125em
+        color darken(light-primary-color, 20%)
         display inline-block
-        font-family 'Material-icon'
-        font-size 1.5rem
+        font-size 1.1rem
         font-weight normal
-        height 40px
-        line-height 40px
-        margin .5em
-        padding .2em
+        height 1.2em
+        line-height 1.2em
+        margin 0 .5em
+        padding .5em
         text-align center
         text-decoration none
-        transition background ease .25s, box-shadow ease .5s
-        vertical-align middle
-        width 40px
+        transition all ease .3s
+        width auto
 
         &:hover
-            box-shadow z-depth-2 //sombra en vars_mat_design.styl
+            background-color accent-color
+            box-shadow z-depth-1 //sombra en vars_mat_design.styl
+            color rgba(255,255,255,.8)
 
-        &--mail:before
-            content '\e606'
-        &--mail:hover
-            background dark-primary-color //color en vars_mat_design.styl
-            color white
+@media screen and (max-width 630px)
+    .header
+        &__title
+            font-size 1.4rem
 
-        &--facebook:before
-            content '\e62d'
-        &--facebook:hover
-            background #1e62a9
-            color white
+        &__info
+            width 175px
+    .nav
+        left 185px
 
-        &--twitter:before
-            content '\e62e'
-        &--twitter:hover
-            background #4eb9f3
-            color white
+        &__link
+            font-size 1rem
+            margin 0 .25em
+            padding .25em
 
-        &--github:before
-            font-size 35px
-            content '\e62c'
-        &--github:hover
-        &--download:hover
-            background white
-            color #333
+@media screen and (max-width 500px)
+    .header
+        height 120px
 
-         &--download:before
-            content '\e604'
+        &__info
+            height 115px
+            width 50%
 
-@media screen and (max-width 600px)
-    .info__title
-        font-size 2rem
-        padding 0
+        &__title
+            padding 0
 
-    .info__autor
-        margin-bottom .5em
+        &__link
+            font-size 1rem
 
-    .info__social-icon
-        font-size 1.2rem
-        height 30px
-        line-height 30px
-        margin .4em
-        width 30px
+    .nav
+        left 50%
+        top 13%
+        width 45%
 
-        &--mail
-            background dark-primary-color //color en vars_mat_design.styl
-            color white
-
-        &--facebook
-            background #1e62a9
-            color white
-
-        &--twitter
-            background #4eb9f3
-            color white
-
-        &--github
-        &--download
-            background white
-            color #333
-
-        &--github:before
-            font-size 30px
+        &__link
+            display block
+            font-size 1rem
+            margin 0 .2em
+            padding .2em .2em .2em 10%
+            text-align left
+            text-decoration underline
