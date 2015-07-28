@@ -3,18 +3,18 @@
 \*------------------------------------*/
 .content
     background-color lighten(light-primary-color, 90%) //color en vars_mat_design.styl
+    color lighten(default-primary-color, 15%)
     font-size 1.2rem
     font-weight 300
     height 0
     line-height 1.8rem
     opacity 0
     overflow hidden
-    padding 0
-    transform translateX(-50%)
-    transition transform .7s ease, opacity .7s ease .2s
+    padding 0 2%
+    transform scaleY(0)
+    transition height .5s ease, transform .6s ease, opacity .4s ease-in .2s
     visibility hidden
     width 96%
-    color lighten(default-primary-color, 15%)
 
     &__title
         font-weight 400
@@ -27,5 +27,3 @@
     .content
         font-size 1.1rem
         line-height 1.6rem
-        transform translateX(0)
-        transition all .25s ease

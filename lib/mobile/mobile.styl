@@ -10,7 +10,7 @@
         font-family 'Material-icon'
         font-size 3.5rem
         line-height 120px
-        transition all ease .3s
+        transition all .3s ease
 
     &:hover:before
         font-size 2rem
@@ -20,44 +20,33 @@
         content 'Watch on your phone...'
         line-height 16px
 
-/*------------------------------------*\
-    BLOQUE MOBILE__CHECKBOX
-\*------------------------------------*/
-.mobile__checkbox
-    &:checked + .mobile__label
-        border-radius 50% 0% 0% 50%
+    /.mobile__checkbox:checked + .mobile__label
+        border-radius 0 0 50% 50%
         box-shadow z-depth-2 //sombra en vars_mat_design.styl
 
-    &:checked + .mobile__label:before
+    /.mobile__checkbox:checked + .mobile__label:before
         content '\e626'
         font-size 2rem
         line-height 1.9em
 
-    &:checked + .mobile__label:after
+    /.mobile__checkbox:checked + .mobile__label:after
         content 'Read the QR code'
-
-    &:checked + .mobile__label + .mobile__qr-container
-        left 140px
-        opacity 1
-        visibility visible
-
-    &:checked + .mobile__label + .mobile__qr-container > .mobile__qr-image
-        max-width 100%
-        display block
-        opacity 1
 
 /*------------------------------------*\
     BLOQUE MOBILE__QR__CONTAINER
 \*------------------------------------*/
 .mobile__qr-container
+    bottom 105%
     height auto
     left 0
     margin 0
-    opacity 0
     padding 0
     position absolute
-    top 0
-    transition all ease .5s .5s
+    transform scale(0)
+    transition transform .5s ease .3s
     visibility hidden
     width 120px
-    z-index -100
+
+    /.mobile__checkbox:checked + .mobile__label + .mobile__qr-container
+        transform scale(1)
+        visibility visible
