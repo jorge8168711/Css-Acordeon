@@ -11,22 +11,13 @@
     BLOQUE HEADER
 \*------------------------------------*/
 .header
-    background default-primary-color
+    background dark-primary-color
     box-shadow z-depth-1 //sombra en vars_mat_design.styl
-    padding 2em 0 0 .5em
+    box-sizing border-box
+    padding 1em 0
     position relative
     text-align center
     width 100%
-
-    &::after
-        background-color dark-primary-color
-        content ''
-        display block
-        height 30px
-        left 0
-        position absolute
-        top 0
-        width 100%
 
     &__title
         color rgba(white, .9)
@@ -47,7 +38,7 @@
     &__social-icon
         -moz-osx-font-smoothing: grayscale;
         -webkit-font-smoothing: antialiased;
-        background-color accent-color
+        background-color default-primary-color
         border-radius 50%
         box-shadow z-depth-1 //sombra en vars_mat_design.styl
         color white

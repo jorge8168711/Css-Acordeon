@@ -2,9 +2,8 @@
     BLOQUE CONTENIDOS
 \*------------------------------------*/
 .content
-    background-color default-primary-color //color en vars_mat_design.styl
-    box-shadow z-depth-1 //sombra en vars_mat_design.styl
-    color white
+    background-color lighten(light-primary-color, 60%) //color en vars_mat_design.styl
+    color secondary-text-color
     font-size 1.2rem
     font-weight 300
     height 0
@@ -18,6 +17,10 @@
     width 96%
 
     &__title
+        font-weight 400
+        margin .5em 0
+
+    &__text
         margin 0
 
 @media screen and (max-width 600px)
