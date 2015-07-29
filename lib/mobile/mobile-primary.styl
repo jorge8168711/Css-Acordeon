@@ -5,12 +5,15 @@
     border-radius 50%
     display block
     height 120px
-    margin 4em auto
+    margin 9em auto 4.5em
     position relative
     width 120px
 
+    &__checkbox
+        display none
+
     &__label
-        background dark-primary-color //color en vars_mat_design.styl
+        background-color accent-color //color en vars_mat_design.styl
         border-radius 50%
         box-shadow z-depth-1 //sombra en vars_mat_design.styl
         color white
@@ -20,18 +23,19 @@
         height 100%
         overflow hidden
         text-align center
-        transition all ease .3s
+        transition all .5s ease
         width 100%
 
-    &__checkbox
-        display none
-
     &__qr-image
-        box-shadow z-depth-3 //sombra en vars_mat_design.styl-depth-3
-        display none
-        max-width 50%
+        box-shadow z-depth-2 //sombra en vars_mat_design.styl-depth-3
+        max-width 100%
         opacity 0
-        transition max-width ease .5s .5s, opacity ease .5s .5s
+        transition all .5s ease-in-out .3s
+        visibility hidden
+
+    /.mobile__checkbox:checked + .mobile__label + .mobile__qr-container > .mobile__qr-image
+        opacity 1
+        visibility visible
 
 @media screen and (max-width 600px)
     .mobile
