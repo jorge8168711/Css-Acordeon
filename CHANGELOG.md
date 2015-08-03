@@ -1,4 +1,8 @@
 #Releases
+
+## [v1.2.2] 28-jul-2015
+- Mejora de las animaciones del bloque mobile.
+
 ## [v1.2.0] 28-jul-2015
 ### Added
 - Archivo CHANGELOG.md para crear el registro de cada release.

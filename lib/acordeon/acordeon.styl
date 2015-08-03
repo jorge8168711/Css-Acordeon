@@ -1,15 +1,15 @@
-/*------------------------------------*\
-    BLOQUE ACORDEON
-\*------------------------------------*/
+/**------------------------------------------
+ **  COMPONENTE ACORDEON
+ **------------------------------------------*/
 .acordeon-item
-    background-color lighten(light-primary-color, 90%)
+    background-color lighten(light-primary-color, 90%) //color en variables.styl
     display block
 
     &__label
-        background-color default-primary-color//lighten(light-primary-color, 70%)
-        border-bottom solid 1px rgba(255,255,255,.3)//borde en vars_mat_design.styl
-        box-shadow z-depth-1
-        color rgba(255,255,255,.9) //color en vars_mat_design.styl
+        background-color default-primary-color //color en variables.styl
+        border-bottom solid 1px rgba(255,255,255,.3)
+        box-shadow z-depth-1 //sombra en variables.styl
+        color rgba(255,255,255,.9)
         cursor pointer
         display block
         font-size 1rem
@@ -30,23 +30,23 @@
 
         &:hover
             border-color rgba(255,255,255,.1)
-            background-color rgba(default-primary-color, .9)
+            background-color rgba(default-primary-color, .9) //color en variables.styl
             z-index 20
 
     &__input
         display none
 
     &__input:checked + .acordeon-item__label
-        background-color rgba(default-primary-color, .9)
-        border-left 10px solid accent-color
-        box-shadow z-depth-1
+        background-color rgba(default-primary-color, .9) //color en variables.styl
+        border-left 10px solid accent-color //color en variables.styl
+        box-shadow z-depth-1 //sombra en variables.styl
         z-index 10
 
     &__input:checked + .acordeon-item__label + .content
         height auto
         opacity 1
         padding 2%
-        transform scaleY(1)
+        transform scale(1)
         visibility visible
 
     &__input:checked + .acordeon-item__label:after

@@ -1,18 +1,9 @@
-/*------------------------------------*\
-    CONTENIDO
-\*------------------------------------*/
-
-/*
- * BLOQUE HEADER.....Header que contiene título y autor del proyecto
- * BLOQUE MOBILE...Botón que muestra el código QR para ver en moviles
- */
-
-/*------------------------------------*\
-    BLOQUE HEADER
-\*------------------------------------*/
+/**------------------------------------------
+ **  COMPONENTE HEADER
+ **------------------------------------------*/
 .header
-    background dark-primary-color
-    box-shadow z-depth-1 //sombra en vars_mat_design.styl
+    background dark-primary-color //color en variables.styl
+    box-shadow z-depth-1 //sombra en variables.styl
     padding .75em 0
     position relative
     width 100%
@@ -26,7 +17,7 @@
         width 220px
 
         &::after
-            border-right 5px solid accent-color
+            border-right 5px solid accent-color //color en variables.styl
             content ''
             display block
             height 90%
@@ -40,36 +31,10 @@
         font-weight 300
 
     &__autor
-        color light-primary-color //color en vars_mat_design.styl
+        color light-primary-color //color en variables.styl
         font-size 1rem
         font-weight 300
         margin 0
-
-.nav
-    display block
-    left 230px
-    position absolute
-    top 35%
-
-    &__link
-        border-radius .125em
-        color darken(light-primary-color, 20%)
-        display inline-block
-        font-size 1.1rem
-        font-weight normal
-        height 1.2em
-        line-height 1.2em
-        margin 0 .5em
-        padding .5em
-        text-align center
-        text-decoration none
-        transition all .3s ease
-        width auto
-
-        &:hover
-            background-color accent-color
-            box-shadow z-depth-1 //sombra en vars_mat_design.styl
-            color rgba(255,255,255,.8)
 
 @media screen and (max-width 630px)
     .header
@@ -78,13 +43,6 @@
 
         &__info
             width 175px
-    .nav
-        left 185px
-
-        &__link
-            font-size 1rem
-            margin 0 .25em
-            padding .25em
 
 @media screen and (max-width 500px)
     .header
@@ -100,6 +58,45 @@
         &__link
             font-size 1rem
 
+/**------------------------------------------
+ **  COMPONENTE NAV
+ **------------------------------------------*/
+.nav
+    display block
+    left 230px
+    position absolute
+    top 35%
+
+    &__link
+        border-radius .125em
+        color darken(light-primary-color, 20%) //color en variables.styl
+        display inline-block
+        font-size 1.1rem
+        font-weight normal
+        height 1.2em
+        line-height 1.2em
+        margin 0 .5em
+        padding .5em
+        text-align center
+        text-decoration none
+        transition all .3s ease
+        width auto
+
+        &:hover
+            background-color accent-color //color en variables.styl
+            box-shadow z-depth-1 //sombra en variables.styl
+            color rgba(255,255,255,.8)
+
+@media screen and (max-width 630px)
+    .nav
+        left 185px
+
+        &__link
+            font-size 1rem
+            margin 0 .25em
+            padding .25em
+
+@media screen and (max-width 500px)
     .nav
         left 50%
         top 13%
