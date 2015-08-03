@@ -1,6 +1,6 @@
-/*------------------------------------*\
-    BLOQUE MOBILE__LABEL
-\*------------------------------------*/
+/**------------------------------------------
+ **  COMPONENTE MOBILE__LABEL
+ **------------------------------------------*/
 .mobile__label
     &:before
         -moz-osx-font-smoothing  grayscale
@@ -22,7 +22,7 @@
 
     /.mobile__checkbox:checked + .mobile__label
         border-radius 0 0 50% 50%
-        box-shadow z-depth-2 //sombra en vars_mat_design.styl
+        box-shadow z-depth-2 //sombra en variables.styl
 
     /.mobile__checkbox:checked + .mobile__label:before
         content '\e626'
@@ -32,9 +32,9 @@
     /.mobile__checkbox:checked + .mobile__label:after
         content 'Read the QR code'
 
-/*------------------------------------*\
-    BLOQUE MOBILE__QR__CONTAINER
-\*------------------------------------*/
+/**------------------------------------------
+ **  COMPONENTE MOBILE__QR__CONTAINER
+ **------------------------------------------*/
 .mobile__qr-container
     bottom 105%
     height auto
@@ -43,7 +43,7 @@
     padding 0
     position absolute
     transform scale(0)
-    transition transform .5s ease .3s
+    transition transform .3s ease-in
     visibility hidden
     width 120px
 
