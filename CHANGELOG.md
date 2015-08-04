@@ -1,6 +1,16 @@
 #Releases
 
+## [v1.3.0] 4-ago-2015
+### Added
+- Footer agregado al proyecto.
+- Links animados al nombre del autor y a los links de agradecimiento del footer.
+
+## [v1.2.3] 3-ago-2015
+### Changed
+-Optimización del tiempo de la animación de los contenidos para que se viera más natural.
+
 ## [v1.2.2] 28-jul-2015
+### Changed
 - Mejora de las animaciones del bloque mobile.
 
 ## [v1.2.0] 28-jul-2015
