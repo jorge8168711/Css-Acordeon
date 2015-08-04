@@ -1,3 +1,6 @@
+/**------------------------------------------
+ **  U-wrapper
+ **------------------------------------------*/
 .U-wrapper
     overflow hidden
     background-color lighten(light-primary-color, 90%) //color en variables.styl
@@ -9,7 +12,38 @@
     .U-wrapper
         width 90%
 
+/**------------------------------------------
+ **  U-header-text
+ **------------------------------------------*/
 .U-header-text
     display block
     margin 0
     text-align right
+
+/**------------------------------------------
+ **  U-animated-link
+ **------------------------------------------*/
+.U-animated-link::before
+.U-animated-link::after
+    background-color rgba(light-primary-color,.15)
+    content ''
+    display block
+    height 50%
+    position absolute
+    transition all .2s ease-in-out
+    width 0
+    z-index 5
+
+.U-animated-link::before
+    border-radius .125em .125em 0 0
+    top 0
+    left 0
+
+.U-animated-link::after
+    border-radius 0 0 .125em .125em
+    bottom 0
+    right 0
+
+.U-animated-link:hover::after
+.U-animated-link:hover::before
+    width 100%
