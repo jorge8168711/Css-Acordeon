@@ -1,0 +1,14 @@
+.ink
+    background hsl(47,86%,11%)
+    border-radius 100%
+    display block
+    position absolute
+    transform scale(0)
+
+.ink.animate
+    animation ripple .9s linear
+
+@keyframes ripple
+    100%
+        opacity 0
+        transform scale(2.5)
