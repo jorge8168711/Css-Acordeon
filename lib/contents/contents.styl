@@ -10,11 +10,13 @@
     line-height 1.8rem
     opacity 0
     overflow hidden
-    padding 0 2%
+    padding 0
+    position relative
     transform scale(0)
     transition padding .4s ease, transform .55s ease, opacity .55s ease-in-out .2s
     visibility hidden
     width 96%
+    z-index -1
 
     &__title
         font-weight 400
@@ -22,6 +24,13 @@
 
     &__text
         margin 0
+
+    /.acordeon-item__input:checked + .ripple-parent + .content
+        height auto
+        opacity 1
+        padding 2%
+        transform scale(1)
+        visibility visible
 
 @media screen and (max-width 600px)
     .content
