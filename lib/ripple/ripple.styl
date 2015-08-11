@@ -1,0 +1,26 @@
+.ripple
+    -webkit-tap-highlight-color rgba(0, 0, 0, 0)
+    touch-action none
+
+    &-parent
+        box-shadow z-depth-1
+        overflow hidden
+        position relative
+
+    &-ink
+        // background hsl(47,86%,11%)
+        border-radius 100%
+        display block
+        position absolute
+        transform scale(0)
+
+    &-ink-animate
+        animation ripple .7s linear
+
+    &::selection
+        background-color rgba(255,255,255,0)
+
+@keyframes ripple
+    100%
+        opacity 0
+        transform scale(2.5)
