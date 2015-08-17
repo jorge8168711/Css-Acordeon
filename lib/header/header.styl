@@ -1,121 +1,93 @@
-/**------------------------------------------
+/**
  **  COMPONENTE HEADER
  **------------------------------------------*/
 .header
-    background dark-primary-color //color en variables.styl
-    box-shadow z-depth-1 //sombra en variables.styl
-    padding .75em 0
+    background dark-primary-color
+    height 15.625em
+    MaterialShadow(1)
+    padding 4em 0 0 0
     position relative
     width 100%
 
+    &::before
+        background-color darken(dark-primary-color, 10%)
+        content ''
+        height 1.5em
+        left 0
+        MaterialShadow(1)
+        position absolute
+        top 0
+        width 100%
+
     &__info
         box-sizing border-box
-        display block
-        margin 0
-        padding .5em .75em
+        display inline-block
+        height 50px
+        padding 0 .5em 0 1em
         position relative
-        width 220px
+        vertical-align top
 
         &::after
-            border-right 5px solid accent-color //color en variables.styl
+            border-right 1px solid black54
             content ''
-            display block
-            height 90%
+            height 100%
             position absolute
             right 0
-            top 5%
+            top 0
 
     &__title
-        color rgba(white, .9)
-        font-size 1.8rem
-        font-weight 300
-        padding-bottom .25em
+        color white2
+        MaterialText(headline)
 
     &__autor
-        color darken(light-primary-color, 15%) //color en variables.styl
-        font-size 1rem
-        font-weight 300
-        margin 0
+        color black54
+        MaterialText(caption)
 
     &__link
-        color light-primary-color
+        color white2
         margin-left .25em
         padding .1em .25em
         position relative
         text-decoration none
+        z-index 10
 
-@media screen and (max-width 630px)
+@media screen and (max-width 430px)
     .header
-        &__title
-            font-size 1.4rem
-
         &__info
-            width 175px
+            display block
+            margin-bottom .5em
+            width 100%
 
-@media screen and (max-width 500px)
-    .header
-        height 140px
+            &::after
+                border none
 
-        &__info
-            height 145px
-            width 50%
-
-        &__title
-            font-size 1.8rem
-            padding 0
-
-/**------------------------------------------
+/**
  **  COMPONENTE NAV
  **------------------------------------------*/
 .nav
-    display block
-    left 230px
-    position absolute
-    top 35%
+    display inline-block
+    margin-left .5em
+    height 50px
 
-    &__link
+    &__btn
+        background-color darken(dark-primary-color, 10%)
         border-radius .125em
-        color darken(light-primary-color, 20%) //color en variables.styl
+        color white2//color en material-resources.styl
         display inline-block
-        font-size 1.1rem
-        font-weight normal
-        height 1.2em
-        line-height 1.2em
-        margin 0 .5em
-        padding .5em
+        margin 6.8125px .5em 0 .5em
+        MaterialShadow(1)
+        MaterialText(button)
+        padding .55em
         text-align center
         text-decoration none
         transition all .3s ease
-        width auto
 
         &:hover
-            background-color accent-color //color en variables.styl
-            box-shadow z-depth-1 //sombra en variables.styl
-            color rgba(255,255,255,.8)
+            background lighten(dark-primary-color, 5%)
+            box-shadow z-depth-2 //sombra en material-resources.styl
 
-@media screen and (max-width 630px)
+@media screen and (max-width 430px)
     .nav
-        left 185px
-
-        &__link
-            font-size 1rem
-            margin 0 .25em
-            padding .25em
-
-@media screen and (max-width 500px)
-    .nav
-        left 50%
-        top 13%
-        width 50%
-
-        &__link
-            background-color rgba(accent-color, .85)
-            box-shadow z-depth-1
-            color rgba(255,255,255,.8)
-            display block
-            font-size 1.1rem
-            margin 0 0 .45em .8em
-            padding .14em .14em .14em 10%
-            text-align left
-            text-decoration none
-            width 60%
+        display block
+        text-align center
+        width 100%

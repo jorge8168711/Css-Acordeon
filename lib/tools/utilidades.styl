@@ -1,4 +1,4 @@
-/**------------------------------------------
+/**
  **  U-wrapper
  **------------------------------------------*/
 .U-wrapper
@@ -10,7 +10,7 @@
     .U-wrapper
         width 90%
 
-/**------------------------------------------
+/**
  **  U-header-text
  **------------------------------------------*/
 .U-header-text
@@ -18,19 +18,24 @@
     margin 0
     text-align right
 
-/**------------------------------------------
+@media screen and (max-width 430px)
+    .U-header-text
+        text-align center
+
+/**
  **  U-animated-link
  **------------------------------------------*/
 .U-animated-link::before
 .U-animated-link::after
-    background-color rgba(light-primary-color,.15)
+    background-color darken(dark-primary-color, 10%)
     content ''
     display block
     height 50%
+    MaterialShadow(1)
     position absolute
     transition all .2s ease-in-out
     width 0
-    z-index 5
+    z-index -1
 
 .U-animated-link::before
     border-radius .125em .125em 0 0
