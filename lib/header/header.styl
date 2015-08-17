@@ -5,11 +5,11 @@
     background dark-primary-color
     height 15.625em
     MaterialShadow(1)
-    padding 4em 0 0 0
+    padding 3.25em 0 0 0
     position relative
     width 100%
 
-    &::before
+    &::after
         background-color darken(dark-primary-color, 10%)
         content ''
         height 1.5em
@@ -19,11 +19,16 @@
         top 0
         width 100%
 
+    /.header-wrapper
+        margin 0 auto
+        text-align left
+        width 750px
+
     &__info
         box-sizing border-box
         display inline-block
         height 50px
-        padding 0 .5em 0 1em
+        padding 0 .5em 0 0
         position relative
         vertical-align top
 
@@ -51,8 +56,15 @@
         text-decoration none
         z-index 10
 
-@media screen and (max-width 430px)
+@media screen and (max-width 760px)
+    .header-wrapper
+        width 80%
+
+@media screen and (max-width 570px)
     .header
+        /.header-wrapper
+            width 100%
+
         &__info
             display block
             margin-bottom .5em
@@ -70,24 +82,17 @@
     height 50px
 
     &__btn
-        background-color darken(dark-primary-color, 10%)
-        border-radius .125em
-        color white2//color en material-resources.styl
-        display inline-block
-        margin 6.8125px .5em 0 .5em
-        MaterialShadow(1)
+        background-color rgba(255,255,255,0)
+        color white2 //color en material-resources.styl
+        height 100%
         MaterialText(button)
         padding .55em
         text-align center
-        text-decoration none
-        transition all .3s ease
+        width 100%
 
-        &:hover
-            background lighten(dark-primary-color, 5%)
-            box-shadow z-depth-2 //sombra en material-resources.styl
-
-@media screen and (max-width 430px)
+@media screen and (max-width 570px)
     .nav
         display block
+        margin 0
         text-align center
         width 100%

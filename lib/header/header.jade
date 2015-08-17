@@ -1,9 +1,13 @@
 header(class='header')
-    div(class="header__info")
-        h1(class='header__title U-header-text') Material acordeon
-        h2(class='header__autor U-header-text') by
-            a(class='header__link U-animated-link' href='https://www.twitter.com/JorgeBarron28' title="Jorge Eduardo" target='_blank') Jorge Eduardo
+    div(class='header-wrapper')
+        div(class="header__info")
+            h1(class='header__title U-header-text') Material acordeon
+            h2(class='header__autor U-header-text') by
+                a(class='header__link U-animated-link' href='https://www.twitter.com/JorgeBarron28' title="Jorge Eduardo" target='_blank') Jorge Eduardo
 
-    nav(class="nav")
-        button(class='nav__btn' type='button' title='GitHub' name='GitHub') GitHub
-        button(class='nav__btn' type='button' title='Download' name='Download') Download
+        nav(class="nav")
+            div(class='ripple--btn-parent')
+                button(class='ripple nav__btn' data-inkColor='rgba(255,255,255, .25)' type='button' title='GitHub' name='GitHub') GitHub
+            
+            div(class='ripple--btn-parent')
+                button(class='ripple nav__btn' data-inkColor='rgba(255,255,255, .25)' type='button' title='Download' name='Download') Download

@@ -2,13 +2,26 @@
     -webkit-tap-highlight-color rgba(0, 0, 0, 0)
     touch-action none
 
-    &-parent
-        box-shadow z-depth-1
+    &--label-parent
         overflow hidden
         position relative
 
+    &--btn-parent
+        background-color darken(dark-primary-color, 10%)
+        border-radius .125em
+        display inline-block
+        margin 6.8125px .5em 0 .5em
+        MaterialShadow(1)
+        overflow hidden
+        position relative
+        transition all .3s ease
+        width 7em
+
+        &:hover
+            background-color lighten(dark-primary-color, 5%)
+            box-shadow z-depth-2
+
     &-ink
-        // background hsl(47,86%,11%)
         border-radius 100%
         display block
         position absolute
