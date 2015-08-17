@@ -1,9 +1,18 @@
-/**------------------------------------------
+/**
  **  COMPONENTE ACORDEON
  **------------------------------------------*/
 .acordeon-item
     background-color rgba(255,255,255,0)
     display block
+
+    /.acordeon-item-wrapper
+        background-color white
+        margin -11em auto 5em auto
+        MaterialShadow(3)
+        padding 100px
+        position relative
+        width 550px
+        z-index 50
 
     &__label
         background-color default-primary-color //color en variables.styl
@@ -33,9 +42,20 @@
     &__input
         display none
 
-    &__input:checked + .ripple-parent > .acordeon-item__label
+    &__input:checked + .ripple--label-parent > .acordeon-item__label
             background-color rgba(default-primary-color, .9) //color en variables.styl
             border-left 10px solid accent-color //color en variables.styl
 
-    &__input:checked  + .ripple-parent > .acordeon-item__label::after
+    &__input:checked  + .ripple--label-parent > .acordeon-item__label::after
             transform rotate(90deg)
+
+@media screen and (max-width 760px)
+    .acordeon-item-wrapper
+        padding 50px 5%
+        width 70%
+
+@media screen and (max-width 570px)
+    .acordeon-item-wrapper
+        margin -8em auto 0 auto
+        padding 25px 5%
+        width 90%
