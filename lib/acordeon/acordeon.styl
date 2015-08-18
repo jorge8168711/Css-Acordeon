@@ -1,61 +1,58 @@
 /**
  **  COMPONENTE ACORDEON
  **------------------------------------------*/
-.acordeon-item
-    background-color rgba(255,255,255,0)
-    display block
+.acordeon
+    background-color white
+    MaterialShadow(1)
 
-    /.acordeon-item-wrapper
-        background-color white
-        margin -11em auto 5em auto
-        MaterialShadow(3)
-        padding 100px
-        position relative
-        width 550px
-        z-index 50
-
-    &__label
-        background-color default-primary-color //color en variables.styl
-        border-bottom solid 1px rgba(light-primary-color, .5)//color en variables.styl
-        color rgba(255,255,255,.9)
-        cursor pointer
+    &-item
         display block
-        font-size 1rem
-        height 2em
-        line-height 2em
-        padding .5em
-        transition all .3s ease
 
-        &::after
-            -moz-osx-font-smoothing: grayscale;
-            -webkit-font-smoothing: antialiased;
-            content '\e61f'
-            float right
-            font-family 'Material-icon'
-            font-size 1.5rem
+        &__label
+            background-color default-primary-color //color en variables.styl
+            border-bottom solid 1px darken(light-primary-color, 30%)//color en variables.styl
+            color white2
+            cursor pointer
+            display block
+            MaterialText(subhead-2)
+            padding .5em
             transition all .5s ease
 
-        &:hover
-            background-color rgba(default-primary-color, .9) //color en variables.styl
-            border-bottom solid 2px accent-color //color en variables.styl
+            &:hover
+                background-color darken(default-primary-color, 17%) //color en variables.styl
 
-    &__input
-        display none
+            &::after
+                -moz-osx-font-smoothing: grayscale;
+                -webkit-font-smoothing: antialiased;
+                content '\e61f'
+                float right
+                font-family 'Material-icon'
+                font-size 1.5rem
+                transition all .5s ease
 
-    &__input:checked + .ripple-parent > .acordeon-item__label
-            background-color rgba(default-primary-color, .9) //color en variables.styl
-            border-left 10px solid accent-color //color en variables.styl
+            &::before
+                background-color accent-color
+                bottom 0
+                content ''
+                display block
+                height 4px
+                position absolute
+                right 0
+                transition all .2s linear
+                width 0
 
-    &__input:checked  + .ripple-parent > .acordeon-item__label::after
-            transform rotate(90deg)
+            &:hover::before
+                width 100%
 
-@media screen and (max-width 760px)
-    .acordeon-item-wrapper
-        padding 50px 5%
-        width 70%
+        &__input
+            display none
 
-@media screen and (max-width 570px)
-    .acordeon-item-wrapper
-        margin -8em auto 0 auto
-        padding 25px 5%
-        width 90%
+            &:checked + .ripple-parent > .acordeon-item__label
+                background-color darken(default-primary-color,17%) //color en variables.styl
+
+            &:checked + .ripple-parent > .acordeon-item__label::before
+                left 0
+                width 100%
+
+            &:checked  + .ripple-parent > .acordeon-item__label::after
+                transform rotate(90deg)
