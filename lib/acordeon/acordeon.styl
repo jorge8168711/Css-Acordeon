@@ -42,11 +42,11 @@
     &__input
         display none
 
-    &__input:checked + .ripple--label-parent > .acordeon-item__label
+    &__input:checked + .ripple-parent > .acordeon-item__label
             background-color rgba(default-primary-color, .9) //color en variables.styl
             border-left 10px solid accent-color //color en variables.styl
 
-    &__input:checked  + .ripple--label-parent > .acordeon-item__label::after
+    &__input:checked  + .ripple-parent > .acordeon-item__label::after
             transform rotate(90deg)
 
 @media screen and (max-width 760px)
