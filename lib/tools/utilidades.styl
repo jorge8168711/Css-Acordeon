@@ -1,18 +1,27 @@
-/**------------------------------------------
- **  U-wrapper
+/**
+ **  U-material-wrapper
  **------------------------------------------*/
-.U-wrapper
-    overflow hidden
-    background-color lighten(light-primary-color, 90%) //color en variables.styl
-    box-shadow z-depth-2 //sombra en variables.styl
-    margin 5em auto
-    width 600px
+.U-material-wrapper
+    background-color white
+    margin -11em auto 5em auto
+    MaterialShadow(3)
+    padding 100px
+    position relative
+    width 550px
+    z-index 50
 
-@media screen and (max-width 600px)
-    .U-wrapper
+@media screen and (max-width 760px)
+    .U-material-wrapper
+        padding 50px 5%
+        width 70%
+
+@media screen and (max-width 570px)
+    .U-material-wrapper
+        margin -8em auto 0 auto
+        padding 25px 5%
         width 90%
 
-/**------------------------------------------
+/**
  **  U-header-text
  **------------------------------------------*/
 .U-header-text
@@ -20,19 +29,24 @@
     margin 0
     text-align right
 
-/**------------------------------------------
+@media screen and (max-width 570px)
+    .U-header-text
+        text-align center
+
+/**
  **  U-animated-link
  **------------------------------------------*/
 .U-animated-link::before
 .U-animated-link::after
-    background-color rgba(light-primary-color,.15)
+    background-color darken(dark-primary-color, 10%)
     content ''
     display block
     height 50%
+    MaterialShadow(1)
     position absolute
     transition all .2s ease-in-out
     width 0
-    z-index 5
+    z-index -1
 
 .U-animated-link::before
     border-radius .125em .125em 0 0

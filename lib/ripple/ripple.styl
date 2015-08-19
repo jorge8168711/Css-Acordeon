@@ -1,0 +1,30 @@
+.ripple
+    -webkit-tap-highlight-color rgba(0, 0, 0, 0)
+    touch-action none
+
+    &-parent
+        MaterialShadow(1)
+        overflow hidden
+        position relative
+        z-index 1
+
+    &-ink
+        border-radius 100%
+        display block
+        position absolute
+        transform scale(0)
+
+    &-ink-animate
+        animation ripple .7s linear
+
+    &::selection
+        background-color rgba(255,255,255,0)
+
+@keyframes ripple
+    100%
+        opacity 0
+        transform scale(2.5)
+
+@media screen and (max-width 570px)
+    .ripple--btn-parent:hover
+        background-color darken(dark-primary-color, 10%)
