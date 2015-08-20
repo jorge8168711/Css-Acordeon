@@ -2,42 +2,78 @@
     BLOQUE MOBILE
 \*------------------------------------*/
 .mobile
+    background-color accent-color //color en vars_mat_design.styl
     border-radius 50%
-    display block
-    height 120px
-    margin 9em auto 4.5em
-    position relative
-    width 120px
+    color white
+    height 3.75em
+    MaterialShadow(2)
+    overflow hidden
+    position absolute
+    right 1.875em
+    text-align center
+    top -1.875em
+    transition all .15s linear
+    width 3.75em
 
     &__checkbox
         display none
 
     &__label
-        background-color accent-color //color en vars_mat_design.styl
-        border-radius 50%
-        box-shadow z-depth-1 //sombra en vars_mat_design.styl
-        color white
         cursor pointer
-        display block
+        display inline-block
+        font-size 1.75rem
         font-weight 300
         height 100%
-        overflow hidden
+        line-height 60px
         text-align center
-        transition all .5s ease
         width 100%
+
+        &::before
+            font-family 'Material-icon'
+            background-color accent-color
+            color white
+            content '\e620'
+            height 20%
+            left 0
+            line-height 44.7969px
+            MaterialShadow(1)
+            opacity 0
+            padding 0 10% 0 0
+            position absolute
+            text-align right
+            top 0
+            visibility hidden
+            width 90%
+            z-index 1
 
     &__qr-image
         border-radius .125em
-        box-shadow z-depth-2 //sombra en vars_mat_design.styl-depth-3
-        max-width 100%
+        bottom 10%
+        left 0
         opacity 0
-        transition all .3s ease-in
+        position absolute
+        transform scale(0)
         visibility hidden
+        width 100%
 
-    /.mobile__checkbox:checked + .mobile__label + .mobile__qr-container > .mobile__qr-image
+    /.mobile__checkbox:checked + .mobile__label::before
+        animation label .1s linear .2s 1 normal forwards
+
+    /.mobile__checkbox:checked + .mobile__label + .mobile__qr-image
+        animation mobile .1s linear .2s 1 normal forwards
+
+@keyframes mobile
+    100%
+        opacity 1
+        transform scale(1)
+        visibility visible
+
+@keyframes label
+    100%
         opacity 1
         visibility visible
 
 @media screen and (max-width 600px)
     .mobile
+    .mobile--active
         display none
