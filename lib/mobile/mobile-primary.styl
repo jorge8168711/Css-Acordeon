@@ -1,6 +1,6 @@
-/*------------------------------------*\
-    BLOQUE MOBILE
-\*------------------------------------*/
+/**
+ **  COMPONENTE MOBILE
+ **------------------------------------------*/
 .mobile
     background-color accent-color //color en vars_mat_design.styl
     border-radius 50%
@@ -12,8 +12,12 @@
     right 1.875em
     text-align center
     top -1.875em
-    transition all .15s linear
+    transition all .25s linear
     width 3.75em
+
+    &:hover
+        MaterialShadow(3)
+        background-color lighten(accent-color, 15%)
 
     &__checkbox
         display none
@@ -28,50 +32,18 @@
         text-align center
         width 100%
 
-        &::before
-            font-family 'Material-icon'
-            background-color accent-color
-            color white
-            content '\e620'
-            height 20%
-            left 0
-            line-height 44.7969px
-            MaterialShadow(1)
-            opacity 0
-            padding 0 10% 0 0
-            position absolute
-            text-align right
-            top 0
-            visibility hidden
-            width 90%
-            z-index 1
-
     &__qr-image
-        border-radius .125em
-        bottom 10%
+        border-radius 100%
+        bottom 14%
         left 0
         opacity 0
         position absolute
-        transform scale(0)
+        transform scale(.5)
         visibility hidden
         width 100%
 
-    /.mobile__checkbox:checked + .mobile__label::before
-        animation label .1s linear .2s 1 normal forwards
-
     /.mobile__checkbox:checked + .mobile__label + .mobile__qr-image
-        animation mobile .1s linear .2s 1 normal forwards
-
-@keyframes mobile
-    100%
-        opacity 1
-        transform scale(1)
-        visibility visible
-
-@keyframes label
-    100%
-        opacity 1
-        visibility visible
+        animation mobile__qr-image .25s linear .5s 1 normal forwards
 
 @media screen and (max-width 600px)
     .mobile

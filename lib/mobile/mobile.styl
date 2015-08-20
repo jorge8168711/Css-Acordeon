@@ -1,28 +1,69 @@
-/**------------------------------------------
+/**
  **  PARTE DEL COMPONENTE MOBILE__
- **  mobile__label
+ **	        mobile__label
+ **------------------------------------------*/
+.mobile
+    &__label::before
+        background-color rgba(white2, 0)
+        border-radius 50%
+        color black54
+        content '\e620'
+        cursor pointer
+        font-family 'Material-icon'
+        font-size 1.22rem
+        height 15%
+        line-height 33.5938px
+        opacity 0
+        padding 0 5%
+        position absolute
+        right 2%
+        text-align center
+        top 2%
+        transform rotate(-90deg)
+        transition all .3s ease
+        visibility hidden
+        width 11%
+        z-index 50
+
+    &__label:hover::before
+        background-color rgba(white2, .3)
+
+    /.mobile__checkbox:checked + .mobile__label
+        color rgba(255,255,255,0)
+        cursor auto
+
+    /.mobile__checkbox:checked + .mobile__label::before
+        animation mobile__label .25s linear .25s 1 normal forwards
+
+/**
+ **  COMPONENTE MOBILE--ACTIVE
  **------------------------------------------*/
 .mobile
     &--active
-        background-color white //color en vars_mat_design.styl
-        border-radius 0
+        background-color white
+        border-radius 2px
         color white
         height 14em
         MaterialShadow(3)
+        overflow hidden
         position absolute
-        right 1em
+        right 2em
         text-align center
-        top 1em
-        transition all .15s linear
+        top 2em
+        transition all .25s linear
         width 10em
-        z-index 100
+        z-index 50
 
         &::before
+            animation mobile--active .25s linear .75s 1 normal forwards
             background-color accent-color
+            border-radius 0 0 2px 2px
             bottom 0
             content 'Scan the code'
             display block
-            height 10%
+            height 14%
             left 0
+            line-height 31.3594px
+            opacity 0
             position absolute
             width 100%
