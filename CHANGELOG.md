@@ -1,5 +1,11 @@
 # Releases
 
+## [v1.6.0] 21-ago-2015
+### Cambios
+-Rediseño del componente mobile, se creo un Floating Action Button que se transforma en un card que muestra el código QR.
+-Rediño del componente footer, únicamente se cambio el tamaño de la tipografia y se reparo el efecto hover de los links.
+-Pequeño ajuste a la función del componente acordeon que lleva al top del artículo.
+
 ## [v1.5.0] 19-ago-2015
 ### Cambios
 - Rediseño del header y sus componentes basado en los guidelines de material design.
