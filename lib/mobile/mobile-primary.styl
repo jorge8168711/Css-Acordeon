@@ -2,7 +2,7 @@
  **  COMPONENTE MOBILE
  **------------------------------------------*/
 .mobile
-    background-color accent-color //color en vars_mat_design.styl
+    background-color accent-color
     border-radius 50%
     color white
     height 3.75em
@@ -12,13 +12,13 @@
     right 1.875em
     text-align center
     top -1.875em
-    transition all .25s linear
+    transition all .3s linear
     width 3.75em
     z-index 1
 
     &:hover
-        MaterialShadow(3)
         background-color lighten(accent-color, 15%)
+        MaterialShadow(3)
 
     &__checkbox
         display none
@@ -31,11 +31,16 @@
         height 100%
         line-height 60px
         text-align center
-        transition all 1s ease
+        transform rotate(-90deg)
+        transition all .3s linear .4s
         width 100%
 
+        /.mobile__checkbox:checked + .mobile__label
+            color rgba(255,255,255,0)
+            cursor auto
+            transform rotate(0)
+
     &__qr-image
-        border-radius 100%
         bottom 14%
         left 0
         opacity 0
@@ -43,9 +48,10 @@
         transform scale(.5)
         visibility hidden
         width 100%
+        z-index 50
 
-    /.mobile__checkbox:checked + .mobile__label + .mobile__qr-image
-        animation mobile__qr-image .25s linear .8s 1 normal forwards
+        /.mobile__checkbox:checked + .mobile__label + .mobile__qr-image
+            animation mobile__qr-image .2s linear 1.2s 1 normal forwards
 
 @media screen and (max-width 600px)
     .mobile
