@@ -13,12 +13,12 @@
         right 2em
         text-align center
         top 2em
-        transition all .3s linear
+        transition width .4s ease, height .4s ease, border-radius .4s ease, position.5s ease
         width 10em
         z-index 10
 
         &::before
-            animation mobile--active .2s linear 1s 1 normal forwards
+            animation mobile--active .2s ease .4s 1 normal forwards
             background-color accent-color
             border-radius 0 0 2px 2px
             bottom 0
@@ -57,7 +57,7 @@
         width 11%
 
         /.mobile__checkbox:checked + .mobile__label::before
-            animation mobile__label .2s linear .9s 1 normal forwards
+            animation mobile__label .2s ease .8s 1 normal forwards
 
     &__label:hover::before
         color darken(black54, 30%)
