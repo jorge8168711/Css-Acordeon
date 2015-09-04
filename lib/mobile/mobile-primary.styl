@@ -14,7 +14,7 @@
     top -1.875em
     transition all .3s ease
     width 3.75em
-    z-index 1
+    z-index 100
 
     &:hover
         background-color lighten(accent-color, 15%)
@@ -30,6 +30,7 @@
         font-weight 300
         height 100%
         line-height 60px
+        position relative
         text-align center
         transform rotate(-90deg)
         transition all .3s linear .4s
@@ -48,7 +49,7 @@
         transform scale(.5)
         visibility hidden
         width 100%
-        z-index 50
+        z-index 500
 
         /.mobile__checkbox:checked + .mobile__label + .mobile__qr-image
             animation mobile__qr-image .2s ease .8s 1 normal forwards

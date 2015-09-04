@@ -54,7 +54,11 @@
         padding .1em .25em
         position relative
         text-decoration none
-        z-index 10
+        transition all .3s ease
+        &:hover
+            background-color darken(dark-primary-color, 10%)
+            MaterialShadow(1)
+            padding-bottom .3em
 
 @media screen and (max-width 760px)
     .header-wrapper
