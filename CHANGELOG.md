@@ -1,5 +1,11 @@
 # Releases
 
+## [v1.6.2] 04-sep-2015
+### Cambios
+- Cambie la configuración de prepros para compilar con únicamente las últimas 6 versiones.
+- Cambie el hover del etiqueta link ¿del nombre del autor.
+- Correcciones mínimas en archivos .jade
+
 ## [v1.6.1] 21-ago-2015
 - Optimización de la animcación de entrada del componente mobile.
 
