@@ -2,14 +2,15 @@
  **  COMPONENTE ACORDEON
  **------------------------------------------*/
 .acordeon
+    background-color white
     MaterialShadow(1)
 
     &-item
         display block
 
         &__label
-            background-color default-primary-color //color en variables.styl
-            border-bottom solid 1px darken(light-primary-color, 30%)//color en variables.styl
+            background-color default-primary-color
+            border-bottom solid 1px darken(light-primary-color, 30%)
             color white2
             cursor pointer
             display block
@@ -18,7 +19,7 @@
             transition all .5s ease
 
             &:hover
-                background-color darken(default-primary-color, 17%) //color en variables.styl
+                background-color darken(default-primary-color, 17%)
 
             &::after
                 -moz-osx-font-smoothing: grayscale;
@@ -47,7 +48,7 @@
             display none
 
             &:checked + .ripple-parent > .acordeon-item__label
-                background-color darken(default-primary-color,17%) //color en variables.styl
+                background-color darken(default-primary-color,17%)
 
             &:checked + .ripple-parent > .acordeon-item__label::before
                 background-color lighten(accent-color, 30%)
